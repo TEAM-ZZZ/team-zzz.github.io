@@ -1,0 +1,13 @@
+{
+  "name": "zzzApp",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
+    "Materialize": "materialize#~0.97.5"
+  },
+  "devDependencies": {
+    "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
+    "Materialize": "materialize#~0.97.5"
+  }
+}

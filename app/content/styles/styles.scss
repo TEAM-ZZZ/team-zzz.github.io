@@ -1,0 +1,16 @@
+.collapsible-body p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+.user-image{
+	img{
+	max-height:140px;
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

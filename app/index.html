@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html lang="en" ng-app="zzzApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mobileApp</title>
+
+  <!-- bower:css -->
+  <!-- endinject -->
+
+  <link href="app/content/styles/styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <header class="row header">
+    <nav class='s12'>
+      <div class="nav-wrapper teal lighten-2">
+        <a href="#" class="brand-logo right">Stimul<b>US</b></a>
+        <ul id="nav-mobile" class="left ">
+          <li>
+            <a href="http://www.pizza.by/">
+            <i class='material-icons'>menu</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="user">
+    <div class="row user-image">
+      <div class=" col s12 center-align">
+        <img src="app/content/img/photo.jpg" class="circle responsive-img ">
+      </div>
+    </div>
+    <div class="row user-info ">
+      <h5 class='center-align'>Fill the form below</h5>
+
+      <form action="">
+        <div class="container">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>add photo</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">
+                Name : Philip
+                <i class="material-icons right">arrow_drop_down</i>
+              </div>
+              <div class="collapsible-body">
+                <input type="text" placeholder="Edit name">
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                Age : 20
+                <i class="material-icons right">arrow_drop_down</i>
+              </div>
+              <div class="collapsible-body">
+                <input type="number" placeholder="Edit age">
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                Gender : Male <i class="material-icons right">arrow_drop_down</i>
+              </div>
+              <div class="collapsible-body">
+              <p>
+                <input class="with-gap" name="gender" type="radio" id="Male" checked/>
+                <label for="Male">Male</label>
+              </p>
+              <p>
+                <input class="with-gap" name="gender" type="radio" id="Female" />
+                <label for="Female">Female</label>
+              </p>
+              </div>
+           </li>
+          </ul>
+          <input class="waves-effect waves-light btn left" type="submit" value='Submit'>
+
+        </div>
+      </form>
+  </div>
+
+  <!-- bower:js -->
+  <!-- endinject -->
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+</body>
+</html>
