@@ -1,4 +1,4 @@
-http://team-zzz.github.io/ZZZ/   - link to launch this project
+http://team-zzz.github.io - link to launch this project
 
 # Team ZZZ
 
