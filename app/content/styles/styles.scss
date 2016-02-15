@@ -1,51 +1,51 @@
 $white:#fff;
 $teal:#26a69a;
 .user-image{
-	img{
-	max-height:140px;
-	}
+  img{
+  max-height:140px;
+  }
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
   }
 
   body{
-	background-image:url(../img/bg.jpg);
-	background-repeat:no-repeat;
-	background-size:100%;
-	}
+  background-image:url(../img/bg.jpg);
+  background-repeat:no-repeat;
+  background-size:100%;
+  }
 
 .search{
-	display:inline-block;
-	width:80%;
+  display:inline-block;
+  width:80%;
 }
 
 .user-info{
-	input{
-	color:white;
-	}
-	.error{
-	color:white;
-	font-size:18px;
-	}
+  input{
+  color:white;
+  }
+  .error{
+  color:white;
+  font-size:18px;
+  }
 
 }
 
 .button-sign{
-	position:absolute !important;
-	bottom:200px;
-	&_right{
-	right:15px;
-	}
-	&_left{
-	left:15px;
-	}
+  position:absolute !important;
+  bottom: 200px;
+  &_right{
+  right:15px;
+  }
+  &_left{
+  left:15px;
+  }
 }
 .form-adv{
-	color:teal;
+  color:teal;
 }
 
  select {
@@ -60,8 +60,8 @@ input[type=number]::-webkit-outer-spin-button {
    -webkit-appearance: none;
    }
   .logo{
-  	color:teal;
-  	.circle{
-  	color:white;
-  	}
+    color:teal;
+    .circle{
+    color:white;
+    }
   }

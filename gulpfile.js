@@ -24,7 +24,7 @@ gulp.task('connect', function() {
 });
 
 // add angularjs dependency injection
-gulp.task('ngAnnotate', function () {
+gulp.task('ngAnnotate', function() {
   return gulp.src(['app/*.js','app/**/*.js'])
     .pipe(ngAnnotate())
     .pipe(gulp.dest('dist'));
@@ -54,7 +54,7 @@ gulp.task('sort_inject', function() {
 
 // compile scss into css
 gulp.task('css', function() {
-   return gulp.src('app/styles/styles.scss')
+   return gulp.src('app/content/styles/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['> 1%', 'IE 9'],
@@ -79,13 +79,30 @@ gulp.task('css', function() {
 // html
 gulp.task('html', function(){
   return gulp.src('app/index.html')
+  .pipe(inject(
+    gulp.src(mainBowerFiles({
+      paths: {
+        bowerDirectory: 'bower',
+        bowerrc: '.bowerrc',
+        bowerJson: 'bower.json'
+      }
+    }), {read: false}), {name: 'bower'}))
+  .pipe(inject(
+    gulp.src(['app/*.js','app/**/*.js'])
+      .pipe(angularFilesort())
+  ))
+  .pipe(inject(
+    gulp.src(['app/content/styles/*.css'])
+  ))
+  .pipe(gulp.dest(''))
+  .pipe(notify('sort and inject Done! :)'))
   .pipe(connect.reload())
   .pipe(notify('HTML Done! :)'));
 });
 
 // watch
 gulp.task('watch', function(){
-  gulp.watch('content/scss/styles.scss', ['css']);
+  gulp.watch('app/content/styles/styles.scss', ['css']);
   gulp.watch('app/index.html', ['html']);
 });
 

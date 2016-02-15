@@ -17,6 +17,7 @@ body {
 
 .user-info input {
   color: white; }
+
 .user-info .error {
   color: white;
   font-size: 18px; }
@@ -47,5 +48,3 @@ select {
   color: teal; }
   .logo .circle {
     color: white; }
-
-/*# sourceMappingURL=styles.css.map */
