@@ -35,19 +35,19 @@
 </header>
 
 <div ng-controller = "buttonCtrl">
-    <!-- Создаем div, который будет показывать главное окно -->
-    <div ng-show = "homepage">
-    <h1 class="center-align logo">stimul<span class="teal circle">US</span></h1>
-    <br><br>
-      <table>
-        <tr>
-          <!-- Создаем кнопку, которая даст возможность зарегистрироваться -->
-          <td><button class=" waves-effect waves-light left btn button-sign button-sign_left ">Sign in</button></td>
-          <!-- Создаем кнопку, которая вернет нас на вторичное окно -->
-          <td><button class=" waves-effect waves-light right btn button-sign button-sign_right " ng-click = "changeWindow()">Sign up</button></td>
-      </tr>
-      </table>
-    </div>
+  <!-- Создаем div, который будет показывать главное окно -->
+  <div ng-show = "homepage">
+  <h1 class="center-align logo">stimul<span class="teal circle">US</span></h1>
+  <br><br>
+    <table>
+      <tr>
+        <!-- Создаем кнопку, которая даст возможность зарегистрироваться -->
+        <td><button class=" waves-effect waves-light left btn button-sign button-sign_left ">Sign in</button></td>
+        <!-- Создаем кнопку, которая вернет нас на вторичное окно -->
+        <td><button class=" waves-effect waves-light right btn button-sign button-sign_right " ng-click = "changeWindow()">Sign up</button></td>
+    </tr>
+    </table>
+  </div>
 
 <div ng-show = "profile">
 <div class="user">
