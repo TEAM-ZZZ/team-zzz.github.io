@@ -68,3 +68,10 @@
   }
 
 })();
+
+
+
+//-------------fix for <select> window--------//
+$(document).ready(function() {  
+$('select').material_select();
+});
