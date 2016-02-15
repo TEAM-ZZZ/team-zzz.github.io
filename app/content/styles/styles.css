@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .user-image img {
   max-height: 140px; }
 
@@ -48,3 +49,62 @@ select {
   color: teal; }
   .logo .circle {
     color: white; }
+=======
+.user-image img {
+  max-height: 140px; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.search {
+  display: inline-block;
+  width: 80%; }
+
+.user-info input {
+  color: white; }
+.user-info .error {
+  color: white;
+  font-size: 18px; }
+
+.button-sign {
+  position: absolute !important;
+  bottom: 200px; }
+  .button-sign_right {
+    right: 15px; }
+  .button-sign_left {
+    left: 15px; }
+
+.form-adv {
+  color: teal; }
+
+select {
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+  background: white; }
+
+.logo {
+  color: teal; }
+  .logo .circle {
+    color: white; }
+
+.gender-select {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.select-dropdown {
+  background-color: white !important;
+  color: black !important;
+  width: calc(100% - 1rem) !important;
+  padding-left: 1rem !important; }
+
+/*# sourceMappingURL=styles.css.map */
+>>>>>>> cbd071128dad0ec061dfc74cd08257dec102cd02

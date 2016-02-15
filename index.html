@@ -36,7 +36,11 @@
   </nav>
 </header>
 
+<<<<<<< HEAD
 <div ng-controller = "buttonCtrl">
+=======
+  <div ng-controller = "buttonCtrl">
+>>>>>>> cbd071128dad0ec061dfc74cd08257dec102cd02
   <!-- Создаем div, который будет показывать главное окно -->
   <div ng-show = "homepage">
   <h1 class="center-align logo">stimul<span class="teal circle">US</span></h1>
@@ -98,17 +102,25 @@
               <span>Gender : </span> <!---{{ gender}} -->
                <i class="material-icons right">arrow_drop_down</i>
             </div>
-            <select class="collapsible-body"  name = "Gender" ng-controller = "selectCtrl" ng-model = "selectValue" ng-options = "task.gender for task in tasks">
-              <option value = ""></option>
-            </select>
+            <div class="collapsible-body">
+               <div class="input-field col s12 gender-select">
+                  <select name = "Gender" ng-controller = "selectCtrl" ng-model = "selectValue" ng-options = "task.gender for task in tasks">
+                    <option value = ""></option>
+                  </select>
+               </div>
+            </div>
 
          </li>
         </ul>
+
         <input onclick="Materialize.toast('Profile info saved', 4000)"   class=" waves-effect waves-light btn left" type="submit" value='Save'>
 
         <button class="waves-effect waves-light btn right" ng-click = "changeWindow()">Cancel</button>
       </div>
     </form>
+    
+  
+  </div>
   </div>
 </div>
 </div>
