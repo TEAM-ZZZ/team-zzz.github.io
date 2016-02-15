@@ -16,6 +16,11 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/profile/zzz',
       templateUrl: 'app/profile/profile.html',
       controller: 'profileCtrl'
+    })
+    .state('personalPageEdit', {
+      url: '/profile/zzz/edit',
+      templateUrl: 'app/profile/profile.html',
+      controller: 'profileCtrl'
     });
   $urlRouterProvider
     .otherwise('/home');

@@ -6,15 +6,17 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state){
-      $scope.buttonValue = 'Edit';
 
-      $scope.profile = function(buttonValue) {
-        if (buttonValue === 'Edit'){
+      $scope.profile = function() {
+        console.log("1");
+        if ($scope.buttonValue === 'Edit'){
+          console.log("2");
           $scope.buttonValue = 'Save';
-          $state.go('profile/zzz/edit', {userProved: true});
-        } else if(buttonValue === 'Save') {
+          $state.go('personalPageEdit', {userProved: true});
+        } else if($scope.buttonValue === 'Save') {
+            console.log("3");
             $scope.buttonValue = 'Edit';
-            $state.go('profile/zzz', {userProved: true});
+            $state.go('personalPage', {userProved: true});
         }
       };
     }

@@ -15,7 +15,7 @@
       console.log(login, password);
       console.log($state);
       if (login === 'zzz' && password === 'zzz'){
-        $state.go('profile/zzz', {userProved: true});
+        $state.go('personalPage');
       }
     };
   }
