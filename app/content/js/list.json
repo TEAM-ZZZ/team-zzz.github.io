@@ -1,6 +1,6 @@
 
 	{
-	"photo": "../img/1.jpg",
+	"photo": "app/content/img/photo.jpg",
 	"firstName": "Вася",
 	"lastName": "Пупкин",
 	"age": "15",
