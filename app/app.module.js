@@ -2,6 +2,6 @@
 'use strict';
 
 angular
-  .module('zzzApp', []);
+  .module('stimulApp', ['ui.router']);
 
 })();

@@ -2,11 +2,12 @@
 'use strict';
 
 angular
-  .module('zzzApp')
+  .module('stimulApp')
   .config(config);
 
-function config() {
-
+function config($stateProvider) {
+  $stateProvider.state('homePage', {url: '/homepage'});
+  $stateProvider.state('profile', {url: '/profile/:you_filde'});
 }
 
 })();

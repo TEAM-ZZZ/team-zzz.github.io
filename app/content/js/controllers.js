@@ -1,11 +1,7 @@
-var stim = angular.module ( 'stimulApp', ['ui.router'] );
+(function(){
+'use strict';
 
-  //Для красивенькой ссылочки
-  stim.config(['$stateProvider', function($stateProvider){
-	$stateProvider.state('homePage', {url: '/homepage'});
-	$stateProvider.state('profile', {url: '/profile/:you_filde'});
-  }]);
-
+var stim = angular.module('stimulApp');
   //Для выбора пола
   stim.controller ( 'selectCtrl', function ($scope) {
     $scope.tasks = [
@@ -13,7 +9,7 @@ var stim = angular.module ( 'stimulApp', ['ui.router'] );
       {gender: "Male" }
     ];
   })
-  
+
   //Для отображения о том, что инфа сохранена
   //А также для переключения между окнами
   stim.controller ( 'buttonCtrl', function ($scope, $state, $rootScope ) {
@@ -32,16 +28,16 @@ var stim = angular.module ( 'stimulApp', ['ui.router'] );
 	  $scope.profile = !$scope.profile;
 	  $scope.homepage = !$scope.homepage;
 	}
-	
+
 	$scope.homepage = true;
 	$scope.profile = false;
-	
+
 	$scope.url = function (){
 	  $rootScope.state = $state;
 	  $rootScope.state.go('profile', {you_filde: $scope.confirmed}, {location: 'replace', notify: false})
     }
   })
-  
+
   //Для отображения сообщения о неправильном вводе данных
   stim.controller ( 'mainCtrl', function($scope) {
     $scope.error = "";
@@ -51,19 +47,19 @@ var stim = angular.module ( 'stimulApp', ['ui.router'] );
 		if ( elem ) {
 		   elem () ;
 		}
-	  } 
+	  }
 	  else {
         this.$apply ( elem ) ;
 	  }
     };
   });
- 
+
     function change ( check ) {
       var scope = angular.element ( document.getElementById("wrap")).scope () ;
       scope.safeApply (function() {
-        if (check == false) {scope.error = "Please enter a valid name!";} 
+        if (check == false) {scope.error = "Please enter a valid name!";}
 		else {scope.error = "";}
       })
     }
-	
-	
+
+})();
