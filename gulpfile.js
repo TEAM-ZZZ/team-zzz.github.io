@@ -45,6 +45,9 @@ gulp.task('sort_inject', function() {
       gulp.src(['app/*.js','app/**/*.js'])
         .pipe(angularFilesort())
     ))
+    .pipe(inject(
+      gulp.src(['app/content/styles/*.css'])
+    ))
     .pipe(gulp.dest(''))
     .pipe(notify('sort and inject Done! :)'));
 });

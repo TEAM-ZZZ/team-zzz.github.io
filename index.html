@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>mobileApp</title>
-  
-  <!-- bower:css -->
-  <!-- endinject -->
-  
-  <link rel="stylesheet" href="app/content/styles/materialize.css" media="screen,projection">
-  <link href="app/content/styles/styles.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower/Materialize/bin/materialize.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/app/content/styles/styles.css">
+  <!-- endinject -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -29,7 +30,7 @@
         <li>
           <a href="http://www.pizza.by/">
           <i class='material-icons'>menu</i></a>
-        </li>      
+        </li>
       </ul>
     </div>
   </nav>
@@ -39,7 +40,7 @@
     <!-- Создаем div, который будет показывать главное окно -->
     <div ng-show = "homepage">
     <h1 class="center-align logo">stimul<span class="teal circle">US</span></h1>
-    <br><br>  
+    <br><br>
       <table>
         <tr>
           <!-- Создаем кнопку, которая даст возможность зарегистрироваться -->
@@ -49,7 +50,7 @@
       </tr>
       </table>
     </div>
- 
+
 <div ng-show = "profile">
 <div class="user">
   <div class="row user-image">
@@ -61,7 +62,7 @@
     <h4 class='center-align form-adv'>Fill the form below</h4>
 
     <form action="">
-      <div class="container">   
+      <div class="container">
         <div class="file-field input-field">
           <div class="btn">
             <span>add photo</span>
@@ -78,7 +79,7 @@
               <i class="material-icons right">arrow_drop_down</i>
             </div>
             <div class="collapsible-body">
-              <input ng-model = "confirmed" ng-change="url()" type = "text" placeholder = "Name" 
+              <input ng-model = "confirmed" ng-change="url()" type = "text" placeholder = "Name"
               onKeyUp = "if(/[^a-zA-Zа-яА-ЯёЁ]/i.test(this.value)){change(false);}else {change(true);} ">
               <div id="wrap" class = "error" ng-controller = "mainCtrl"><span>{{error}}</span></div>
             </div>
@@ -97,14 +98,14 @@
               <span>Gender : </span> <!---{{ gender}} -->
                <i class="material-icons right">arrow_drop_down</i>
             </div>
-            <select class="collapsible-body"  name = "Gender" ng-controller = "selectCtrl" ng-model = "selectValue" ng-options = "task.gender for task in tasks">     
+            <select class="collapsible-body"  name = "Gender" ng-controller = "selectCtrl" ng-model = "selectValue" ng-options = "task.gender for task in tasks">
               <option value = ""></option>
-            </select>      
-       
+            </select>
+
          </li>
         </ul>
         <input onclick="Materialize.toast('Profile info saved', 4000)"   class=" waves-effect waves-light btn left" type="submit" value='Save'>
-         
+
         <button class="waves-effect waves-light btn right" ng-click = "changeWindow()">Cancel</button>
       </div>
     </form>
@@ -120,8 +121,6 @@
   <!-- endinject -->
 
   <!-- inject:js -->
-  <script src="/app/content/js/materialize.min.js"></script>
-  <script src="/app/content/js/materialize.js"></script>
   <script src="/app/content/js/controllers.js"></script>
   <script src="/app/services/someService.service.js"></script>
   <script src="/app/personalPage/user.controller.js"></script>
