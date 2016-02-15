@@ -1,27 +1,36 @@
+<header  class="row header">
+  <nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo circle teal left">Logo</a>
+        <a class="waves-effect waves-light btn right" ng-hide="hideBtn" ng-click="showLogin()">Sign in</a>
+    </div>
+  </nav>
+</header>
+
 <div class="greeting">
   <h1 class='center-align'>Heh,Greetings</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deserunt illo tenetur cupiditate recusandae distinctio porro, esse reiciendis doloribus nostrum consequuntur numquam eos fuga maxime optio? Ea, dignissimos, voluptates. At.</p>
 </div>
 
-<div class="containter login-form">
+<div class="containter login-form" ng-show="isLogin">
     <div class="row">
       <form action="" class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input type="text" id="login" placeholder="Login">
+            <input type="text" id="login" placeholder="Login" ng-model="login">
             <label for="login">Login</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">lock_outline</i>
-            <input type="password" id="password">
+            <input type="password" id="password" ng-model="password">
             <label for="password">Password</label>
           </div>
         </div>
         <div class="row">
-          <input type="submit" class="btn waves-effect waves-light align-center" value="Sign in">
+          <input type="submit" class="btn waves-effect waves-light align-center" value="Sign in" ng-click="isValid(login, password)">
         </div>
       </form>
     </div>
