@@ -10,114 +10,15 @@
   <!-- inject:css -->
   <!-- endinject -->
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
+  <div ng-include="'app/layout/topNav.html'">
 
-<header class="row header">
-  <nav class='s12'>
-    <div class="nav-wrapper teal lighten-2">
-      <form class='search'>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form >
-      <ul id="nav-mobile" class="left ">
-        <li>
-          <a href="http://www.pizza.by/">
-          <i class='material-icons'>menu</i></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
-  <div ng-controller = "buttonCtrl">
-  <!-- Создаем div, который будет показывать главное окно -->
-  <div ng-show = "homepage">
-  <h1 class="center-align logo">stimul<span class="teal circle">US</span></h1>
-  <br><br>
-    <table>
-      <tr>
-        <!-- Создаем кнопку, которая даст возможность зарегистрироваться -->
-        <td><button class=" waves-effect waves-light left btn button-sign button-sign_left ">Sign in</button></td>
-        <!-- Создаем кнопку, которая вернет нас на вторичное окно -->
-        <td><button class=" waves-effect waves-light right btn button-sign button-sign_right " ng-click = "changeWindow()">Sign up</button></td>
-    </tr>
-    </table>
   </div>
-
-<div ng-show = "profile">
-<div class="user">
-  <div class="row user-image">
-    <div class=" col s12 center-align">
-      <img src="app/content/img/photo.jpg" class="circle responsive-img ">
-    </div>
+  <div class="ui-view">
+   <!-- here will be inserted templates -->
   </div>
-  <div class="row user-info ">
-    <h4 class='center-align form-adv'>Fill the form below</h4>
-
-    <form action="">
-      <div class="container">
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>add photo</span>
-            <input type="file">
-          </div>
-          <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
-          </div>
-        </div>
-        <ul class="collapsible" data-collapsible="accordion">
-          <li>
-            <div class="collapsible-header">
-              <span>Name : </span> <!---{{ name}} -->
-              <i class="material-icons right">arrow_drop_down</i>
-            </div>
-            <div class="collapsible-body">
-              <input ng-model = "confirmed" ng-change="url()" type = "text" placeholder = "Name"
-              onKeyUp = "if(/[^a-zA-Zа-яА-ЯёЁ]/i.test(this.value)){change(false);}else {change(true);} ">
-              <div id="wrap" class = "error" ng-controller = "mainCtrl"><span>{{error}}</span></div>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header">
-              <span>Age : </span> <!---{{ age}} -->
-              <i class="material-icons right">arrow_drop_down</i>
-            </div>
-            <div class="collapsible-body">
-              <input type="number" ng-model = "age" placeholder="Age">
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header">
-              <span>Gender : </span> <!---{{ gender}} -->
-               <i class="material-icons right">arrow_drop_down</i>
-            </div>
-            <div class="collapsible-body">
-               <div class="input-field col s12 gender-select">
-                  <select name = "Gender" ng-controller = "selectCtrl" ng-model = "selectValue" ng-options = "task.gender for task in tasks">
-                    <option value = ""></option>
-                  </select>
-               </div>
-            </div>
-
-         </li>
-        </ul>
-
-        <input onclick="Materialize.toast('Profile info saved', 4000)"   class=" waves-effect waves-light btn left" type="submit" value='Save'>
-
-        <button class="waves-effect waves-light btn right" ng-click = "changeWindow()">Cancel</button>
-      </div>
-    </form>
-    
-  
-  </div>
-  </div>
-</div>
-</div>
 
   <!-- bower:js -->
   <!-- endinject -->

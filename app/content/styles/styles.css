@@ -1,110 +1,21 @@
-<<<<<<< HEAD
-.user-image img {
-  max-height: 140px; }
+/*---------added google icons ----------*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format("woff2"); }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-body {
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%; }
-
-.search {
-  display: inline-block;
-  width: 80%; }
-
-.user-info input {
-  color: white; }
-
-.user-info .error {
-  color: white;
-  font-size: 18px; }
-
-.button-sign {
-  position: absolute !important;
-  bottom: 200px; }
-  .button-sign_right {
-    right: 15px; }
-  .button-sign_left {
-    left: 15px; }
-
-.form-adv {
-  color: teal; }
-
-select {
-  background: transparent;
-  width: 268px;
-  padding: 5px;
-  font-size: 16px;
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
   line-height: 1;
-  border: 0;
-  border-radius: 0;
-  height: 34px;
-  -webkit-appearance: none; }
-
-.logo {
-  color: teal; }
-  .logo .circle {
-    color: white; }
-=======
-.user-image img {
-  max-height: 140px; }
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-body {
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%; }
-
-.search {
+  letter-spacing: normal;
+  text-transform: none;
   display: inline-block;
-  width: 80%; }
-
-.user-info input {
-  color: white; }
-.user-info .error {
-  color: white;
-  font-size: 18px; }
-
-.button-sign {
-  position: absolute !important;
-  bottom: 200px; }
-  .button-sign_right {
-    right: 15px; }
-  .button-sign_left {
-    left: 15px; }
-
-.form-adv {
-  color: teal; }
-
-select {
-  width: 100%;
-  font-size: 16px;
-  box-sizing: border-box;
-  border: none;
-  background: white; }
-
-.logo {
-  color: teal; }
-  .logo .circle {
-    color: white; }
-
-.gender-select {
-  margin: 0 !important;
-  padding: 0 !important; }
-
-.select-dropdown {
-  background-color: white !important;
-  color: black !important;
-  width: calc(100% - 1rem) !important;
-  padding-left: 1rem !important; }
-
-/*# sourceMappingURL=styles.css.map */
->>>>>>> cbd071128dad0ec061dfc74cd08257dec102cd02
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased; }
