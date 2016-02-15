@@ -1,0 +1,58 @@
+<div class="user">
+  <div class="row user-image">
+    <div class=" col s12 center-align">
+      <img ng-src="photo" class="circle responsive-img ">
+    </div>
+  </div>
+  <div class="row user-info ">
+    <h4 class='center-align form-adv'>Fill the form below</h4>
+
+    <form  action="">
+      <div class="container disable">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">
+              <span>Name : </span> <!---{{ name}} -->
+              <i class="material-icons right">arrow_drop_down</i>
+            </div>
+            <div class="collapsible-body">
+              <input type="text" ng-model="name" placeholder = "Name">
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <span>Age : </span> <!---{{ age}} -->
+              <i class="material-icons right">arrow_drop_down</i>
+            </div>
+            <div class="collapsible-body">
+              <input type="number" ng-model="age" placeholder="Age">
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <span>Gender : </span> <!---{{ gender}} -->
+               <i class="material-icons right">arrow_drop_down</i>
+            </div>
+            <div class="collapsible-body">
+              <p>
+                <input class="with-gap" name="gender" type="radio" ng-model="gender" id="genderMale"  />
+                <label for="genderMale">Male</label>
+              </p>
+              <p>
+                <input class="with-gap" name="gender" type="radio" id="genderFemale"  />
+                <label for="genderFemale">Female</label>
+              </p>
+            </div>
+
+         </li>
+        </ul>
+
+
+
+      </div>
+      <input type="submit" class=" waves-effect waves-light btn center " ng-click="profile" value="{{buttonValue}}">
+    </form>
+
+
+  </div>
+</div>

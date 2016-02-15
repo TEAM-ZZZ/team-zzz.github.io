@@ -13,7 +13,7 @@ function config($stateProvider, $urlRouterProvider) {
       controller: 'loginCtrl'
     })
     .state('personalPage', {
-      url: '/profile',
+      url: '/profile/zzz',
       templateUrl: 'app/profile/profile.html',
       controller: 'profileCtrl'
     });
