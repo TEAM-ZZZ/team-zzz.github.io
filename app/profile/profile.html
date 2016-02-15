@@ -8,7 +8,7 @@
     <h4 class='center-align form-adv'>Fill the form below</h4>
 
     <form  action="">
-      <div class="container disable">
+      <div class="container" ng-class="(buttonValue === 'Edit') ? 'disable' : '' ">
         <ul class="collapsible" data-collapsible="accordion">
           <li>
             <div class="collapsible-header">
@@ -50,7 +50,7 @@
 
 
       </div>
-      <input type="submit" class=" waves-effect waves-light btn center " ng-click="profile" value="{{buttonValue}}">
+      <input type="submit" class=" waves-effect waves-light btn center " ng-click="profile(buttonValue)" value="{{buttonValue}}">
     </form>
 
 
