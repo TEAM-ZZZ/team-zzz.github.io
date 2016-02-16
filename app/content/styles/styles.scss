@@ -1,6 +1,7 @@
 $white:#fff;
 $teal:#26a69a;
-$teal_darken:#00796b;
+$teal_darken:#004d40;
+$teal_lighten:#b2dfdb;
 /*---------added google icons ----------*/
 @font-face {
   font-family: 'Material Icons';
@@ -45,7 +46,7 @@ $teal_darken:#00796b;
 }
 
 .brand-logo{
-  color:teal!important;
+  color:$teal_darken!important;
 }
 .login-form-wrapper{
   width: 100%;
@@ -63,7 +64,7 @@ $teal_darken:#00796b;
 }
 
 .user-image{
-  margin-top:2rem;
+  padding-top:2rem;
 }
 .profile-img{
   max-height:150px;
@@ -75,6 +76,9 @@ $teal_darken:#00796b;
   }
 }
 
+.header{
+  margin-bottom:0!important;
+}
 .greeting{
   color:$teal_darken;
 }
@@ -83,4 +87,20 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; 
+}
+
+.profile-wrapper{
+height:100vh;
+  background-color:$teal_lighten;
+}
+
+input{
+  
+}
+
+.white-text{
+color:$white;
+}
+.profile-wrapper > input{
+  margin-left:15px!important;
 }

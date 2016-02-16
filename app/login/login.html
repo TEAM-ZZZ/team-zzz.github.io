@@ -1,9 +1,33 @@
-<div class="nav-wrapper" ng-include="'app/layout/topNav.html'">
-</div>
+
 <div class="background">
+  <header class="header">
+    <nav>
+    <div class="nav-wrapper teal">
+      <a href="#!" class="brand-logo circle left">Stimul<span class="white-text">US</span></a>
+      <ul class="right ">
+        
+        <li><a class="waves-effect waves-light btn teal darken-4
+" ng-click="showLogin()">Sign in</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  </header>
   <div class="greeting">
-    <h2 class='center-align '>Heh,Greetings</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deserunt illo tenetur cupiditate recusandae distinctio porro, esse reiciendis doloribus nostrum consequuntur numquam eos fuga maxime optio? Ea, dignissimos, voluptates. At.</p>
+    <h2 class='center-align '>Welcome to the Stimul<span class="white-text teal darken-4 circle">US</span></h2>
+    <p class='center-align'>With us you can:</p>
+      <p>
+        <i class="material-icons small">play_arrow</i>
+        <span class="white-text">Learn more about people around you and make new friends
+      </p>
+      <p>
+        <i class="material-icons small">play_arrow</i>
+        <span class="white-text">Find more about what you are intrested in
+      </p>
+      <p>
+        <i class="material-icons small">play_arrow</i>
+        <span class="white-text">Share your news
+      </p>
   </div>
 
   <div class="login-form-wrapper valign-wrapper" ng-show="isLogin" ng-click="hideLogin()">
@@ -25,7 +49,7 @@
             </div>
           </div>
           <div class="row">
-            <button  class="btn waves-effect waves-light center-align"ng-click="isValid(login, password)">
+            <button  class="btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)">
               Sign in
             </button>
           </div>
