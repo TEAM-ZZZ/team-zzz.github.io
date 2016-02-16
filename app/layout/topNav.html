@@ -1,8 +1,13 @@
 <header  class="row header" ng-controller="topNavCtrl">
   <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo circle teal left">Logo</a>
-        <a class="waves-effect waves-light btn right">Sign in</a>
+				<div ng-hide="isNav">
+				<a href = "http://www.pizza.by/"><img src = "app/content/img/image.png">
+				</div>
+				<div ng-show="isNav">
+				<a href="#!" class="brand-logo circle teal left">Logo</a>
+        <a class="waves-effect waves-light btn right" ng-hide="hideBtn" ng-click="showLogin()">Sign in</a>
+				</div>
     </div>
   </nav>
 </header>
