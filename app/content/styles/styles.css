@@ -31,3 +31,45 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.1);
   content: ""; }
+
+.background {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+.brand-logo {
+  color: teal !important; }
+
+.login-form-wrapper {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.login-form {
+  border-radius: 30px;
+  background: white;
+  margin: 0 auto;
+  position: relative; }
+
+.user-image {
+  margin-top: 2rem; }
+
+.profile-img {
+  max-height: 150px; }
+
+.profile-form {
+  text-align: center; }
+  .profile-form-container {
+    text-align: left; }
+
+.greeting {
+  color: #00796b; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }

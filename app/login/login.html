@@ -1,37 +1,49 @@
-<header  class="row header">
-  <nav>
-    <div class="nav-wrapper">
-        <a href="#!" class="brand-logo circle teal left">Logo</a>
-        <a class="waves-effect waves-light btn right" ng-hide="hideBtn" ng-click="showLogin()">Sign in</a>
-    </div>
-  </nav>
-</header>
+<div class="background">
+  <header  class="row header">
+    <nav>
+      <div class="nav-wrapper teal">
+        <a href="#!" class="brand-logo circle white left">
+          <span>Logo</span>
+        </a>
+        <ul class="top-menu right ">
+          <li>
+            <a class="waves-effect waves-light btn grey" ng-hide="hideBtn" ng-click="showLogin()">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-<div class="greeting">
-  <h1 class='center-align'>Heh,Greetings</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deserunt illo tenetur cupiditate recusandae distinctio porro, esse reiciendis doloribus nostrum consequuntur numquam eos fuga maxime optio? Ea, dignissimos, voluptates. At.</p>
-</div>
+  <div class="greeting">
+    <h2 class='center-align '>Heh,Greetings</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus deserunt illo tenetur cupiditate recusandae distinctio porro, esse reiciendis doloribus nostrum consequuntur numquam eos fuga maxime optio? Ea, dignissimos, voluptates. At.</p>
+  </div>
 
-<div class="containter login-form" ng-show="isLogin">
-    <div class="row">
-      <form action="" class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
-            <input type="text" id="login" placeholder="Login" ng-model="login">
-            <label for="login">Login</label>
+  <div class="login-form-wrapper valign-wrapper" ng-show="isLogin" ng-click="hideLogin()">
+    <div class=" login-form containter valign center-align" ng-click="$event.stopPropagation()">
+      <div class="row">
+        <form action="" class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" id="login"  ng-model="login">
+              <label for="login">Login</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">lock_outline</i>
-            <input type="password" id="password" ng-model="password">
-            <label for="password">Password</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input type="password" id="password" ng-model="password">
+              <label for="password">Password</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <input type="button" class="btn waves-effect waves-light align-center" value="Sign in" ng-click="isValid(login, password)">
-        </div>
-      </form>
+          <div class="row">
+            <button  class="btn waves-effect waves-light center-align"ng-click="isValid(login, password)">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

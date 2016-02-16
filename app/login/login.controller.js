@@ -16,5 +16,9 @@
         $state.go('personalPage', {userProved: 'proved'});
       }
     };
+    $scope.hideLogin = function() {
+      $scope.isLogin = false;
+      $scope.hideBtn = false;
+    };
   }
 })();

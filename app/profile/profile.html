@@ -1,14 +1,13 @@
+
 <div class="user">
   <div class="row user-image">
     <div class=" col s12 center-align">
-      <img ng-src={{photo}} class="circle responsive-img ">
+      <img ng-src={{photo}} class="circle responsive-img profile-img">
     </div>
   </div>
   <div class="row user-info ">
-    <h4 class='center-align form-adv'>Fill the form below</h4>
-
-    <form  action="">
-      <div class="container" ng-class="(buttonValue === 'Edit') ? 'disable' : '' ">
+    <form class="profile-form" action="">
+      <div class="container profile-form-container" ng-class="(buttonValue === 'Edit') ? 'disable' : '' ">
         <ul class="collapsible" data-collapsible="accordion">
           <li>
             <div class="collapsible-header">
@@ -50,7 +49,9 @@
 
 
       </div>
-      <input type="button"  ng-init="buttonValue='Edit'" class=" waves-effect waves-light btn center " ng-click="profile()" value="{{buttonValue}}">
+      <button   ng-init="buttonValue='Edit'" class=" waves-effect waves-light btn center-align " ng-click="profile()" >
+        {{buttonValue}}
+      </button>
     </form>
 
 
