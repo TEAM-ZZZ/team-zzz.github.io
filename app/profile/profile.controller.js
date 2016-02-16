@@ -17,12 +17,8 @@
       askForPromise.then(success, errorResponse);
 
       function success(answer) {
-        var dataH = answer.data;
-        $scope.dataH = answer.data;
-        $scope.photo = dataH.photo;
-        $scope.name = dataH.firstName + ' ' + dataH.lastName;
-        $scope.age = parseFloat(dataH.age);
-        $scope.gender = dataH.gender;
+       console.log(answer.data);
+        $scope.userData = answer.data;
       }
       function  errorResponse(reason) {
         console.log('Sorry, something went wrong. The source data is unavailable.' + reason)

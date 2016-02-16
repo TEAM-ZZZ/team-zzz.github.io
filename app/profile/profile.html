@@ -2,7 +2,7 @@
   <div class="user ">
     <div class="row user-image">
       <div class=" col s12 center-align">
-        <img ng-src={{photo}} class="circle responsive-img profile-img">
+        <img ng-src={{userData.avatar}} class="circle responsive-img profile-img">
       </div>
     </div>
 	<div class="container center-align">
@@ -11,15 +11,15 @@
         <tbody>
           <tr>
             <td>Name</td>
-            <td>{{name}}</td>
+            <td>{{userData.firstName + ' ' + userData.lastName}}</td>
           </tr>
           <tr>
             <td>Age</td>
-            <td>{{age}}</td>
+            <td>{{userData.age}}</td>
           </tr>
           <tr>
             <td>Gender</td>
-            <td>{{gender}}</td>
+            <td>{{(userData.gender === 'F') ? 'Female' : 'Male'}}</td>
           </tr>
         </tbody>
       </table>
