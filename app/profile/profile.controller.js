@@ -18,7 +18,7 @@
 
       function success(answer) {
         var dataH = answer.data;
-
+        $scope.dataH = answer.data;
         $scope.photo = dataH.photo;
         $scope.name = dataH.firstName + ' ' + dataH.lastName;
         $scope.age = parseFloat(dataH.age);

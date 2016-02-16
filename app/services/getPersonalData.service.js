@@ -11,7 +11,7 @@
 
       myMethods = {
         getPromise: function() {
-          var promise       =  $http.get('app/content/jsonData/data.json'),
+          var promise       =  $http.get('http://fathomless-everglades-3680.herokuapp.com/api/user/1'),
             deferObject =  deferObject || $q.defer();
 
 			promise.then(

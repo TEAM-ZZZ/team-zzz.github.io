@@ -17,6 +17,7 @@
       askForPromise.then(success, errorResponse);
 
       function success(answer) {
+        console.log(answer.data);
         var dataH = answer.data;
         $scope.dataJ = answer.data;
 
