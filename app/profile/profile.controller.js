@@ -6,9 +6,13 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, dataService){
-      var dataH = dataService.personalData();
+      if ($state.params.userProved == false) {
+        $state.go('homePage');
+      };
+
+      /*var dataH = dataService.personalData();
       console.log(dataService);
-      console.log(dataService.personalData());
+      console.log(dataService.personalData());*/
 
      $scope.profile = function() {
        /* console.log(dataH);

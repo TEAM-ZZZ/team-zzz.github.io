@@ -8,7 +8,6 @@
 	function getData($http) {
 
     this.personalData = function() {
-      console.log("function is running");
 
       $http({
         method: 'get',
@@ -16,7 +15,6 @@
         }).then(sucsess, error);
 
       function sucsess(data) {
-        console.log(data);
         return data;
       }
       function error(err){

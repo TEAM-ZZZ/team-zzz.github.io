@@ -12,10 +12,8 @@
       $scope.hideBtn = true;
     };
     $scope.isValid = function(login, password) {
-      console.log(login, password);
-      console.log($state);
       if (login === 'zzz' && password === 'zzz'){
-        $state.go('personalPage');
+        $state.go('personalPage', {userProved: 'proved'});
       }
     };
   }

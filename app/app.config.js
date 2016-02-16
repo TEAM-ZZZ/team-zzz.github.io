@@ -15,7 +15,10 @@ function config($stateProvider, $urlRouterProvider) {
     .state('personalPage', {
       url: '/profile/zzz',
       templateUrl: 'app/profile/profile.html',
-      controller: 'profileCtrl'
+      controller: 'profileCtrl',
+      params: {
+        userProved: ''
+      }
     })
   $urlRouterProvider
     .otherwise('/home');
