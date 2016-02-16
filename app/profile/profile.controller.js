@@ -11,14 +11,13 @@
       $scope.buttonValue = 'Edit';
 
       $scope.profileEdit = function() {
-        $state.go('personalPageEdit', {userProved: 'proved', dataJ: $scope.dataJ});
+        $state.go('personalPageEdit', {userProved: 'proved'});
       };
 
       askForPromise.then(success, errorResponse);
 
       function success(answer) {
         var dataH = answer.data;
-        $scope.dataJ = answer.data;
 
         $scope.photo = dataH.photo;
         $scope.name = dataH.firstName + ' ' + dataH.lastName;
