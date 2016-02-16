@@ -3,11 +3,13 @@
   "dependencies": {
     "angular": "~1.5.0",
     "angular-ui-router": "~0.2.18",
+    "angular-mocks": "1.4.x",
     "Materialize": "materialize#~0.97.5"
   },
   "devDependencies": {
     "angular": "~1.5.0",
     "angular-ui-router": "~0.2.18",
+    "angular-mocks": "1.4.x",
     "Materialize": "materialize#~0.97.5"
   }
 }
