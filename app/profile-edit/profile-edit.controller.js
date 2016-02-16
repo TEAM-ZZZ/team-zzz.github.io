@@ -20,6 +20,7 @@
         };
         console.log(dataObj);
         var userPromise = $http.post('http://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
+
         console.log("Sent");
         /*$state.go('personalPage', {userProved: 'proved'});*/
       };
