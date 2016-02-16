@@ -6,27 +6,29 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, dataService){
-      if ($state.params.userProved == false) {
-        $state.go('homePage');
-      };
+      var askForPromise = dataService.getPromise();
+      askForPromise.then(
 
-      /*var dataH = dataService.personalData();
-      console.log(dataService);
-      console.log(dataService.personalData());*/
-
+        function(answer) {
+		  var dataH = answer.data
+          $scope.photo = dataH.photo;
+      	  $scope.name = dataH.firstName + ' ' + dataH.lastName;
+    	  $scope.age = parseFloat(dataH.age);
+    	  $scope.gender = dataH.gender;
+        },
+        
+        function(reason) {
+          console.log('Sorry, something went wrong. The source data is unavailable.' + reason)
+        }
+      )
+   
      $scope.profile = function() {
-       /* console.log(dataH);
-    	  $scope.photo = dataH.photo;
-      	$scope.name = dataH.firstName + ' ' + dataH.lastName;
-    	  $scope.age = dataH.age;
-    		$scope.gender = dataH.gender;*/
-
         $scope.buttonValue = ($scope.buttonValue === 'Edit') ? 'Save' : 'Edit';
       };
 
       $('.collapsible').collapsible({
         accordion : false
       });
-
+ };
     }
-})();
+)();
