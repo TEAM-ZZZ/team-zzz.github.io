@@ -101,6 +101,15 @@ input{
 .white-text{
 color:$white;
 }
-.profile-wrapper > input{
+.inMargin{
+  font-size:20px!important;
   margin-left:15px!important;
+}
+table,.collapsible{
+font-size:20px!important;
+}
+.greeting-info{
+	position: absolute;
+	bottom: 50px;
+	font-size:18px;
 }
