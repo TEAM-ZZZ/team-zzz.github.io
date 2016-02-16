@@ -39,7 +39,7 @@
   height: 100vh; }
 
 .brand-logo {
-  color: teal !important; }
+  color: #004d40 !important; }
 
 .login-form-wrapper {
   width: 100%;
@@ -56,7 +56,7 @@
   position: relative; }
 
 .user-image {
-  margin-top: 2rem; }
+  padding-top: 2rem; }
 
 .profile-img {
   max-height: 150px; }
@@ -66,10 +66,23 @@
   .profile-form-container {
     text-align: left; }
 
+.header {
+  margin-bottom: 0 !important; }
+
 .greeting {
-  color: #00796b; }
+  color: #004d40; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
+
+.profile-wrapper {
+  height: 100vh;
+  background-color: #b2dfdb; }
+
+.white-text {
+  color: #fff; }
+
+.profile-wrapper > input {
+  margin-left: 15px !important; }

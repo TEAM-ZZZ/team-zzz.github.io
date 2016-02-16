@@ -5,51 +5,26 @@
         <img ng-src={{photo}} class="circle responsive-img profile-img">
       </div>
     </div>
-
     <div class="row user-info ">
-      <form class="profile-form" action="">
-        <div class="container profile-form-container" ng-class="(buttonValue === 'Edit') ? 'disable' : '' ">
-          <ul class="collapsible" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header">
-                <span>Name : </span> {{ name}}
-                <i class="material-icons right">arrow_drop_down</i>
-              </div>
-              <div class="collapsible-body">
-                <input type="text" ng-model="name" placeholder = "Name">
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                <span>Age : </span> {{ age}}
-                <i class="material-icons right">arrow_drop_down</i>
-              </div>
-              <div class="collapsible-body">
-                <input type="number" ng-model="age" placeholder="Age">
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header">
-                <span>Gender : </span> {{ gender}}
-                 <i class="material-icons right">arrow_drop_down</i>
-              </div>
-              <div class="collapsible-body">
-                <p>
-                  <input class="with-gap" name="gender" type="radio" ng-model="gender" id="genderMale" value="Male" />
-                  <label for="genderMale">Male</label>
-                </p>
-                <p>
-                  <input class="with-gap" name="gender" type="radio" id="genderFemale" value="Female" />
-                  <label for="genderFemale">Female</label>
-                </p>
-              </div>
-        </div>
-        <button   ng-init="buttonValue='Edit'" class=" waves-effect waves-light btn center-align " ng-click="profile()" >
-          {{buttonValue}}
-        </button>
-      </form>
-
-
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>{{name}}</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>{{age}}</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>{{gender.value}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <button class=" waves-effect waves-light btn center-align " ng-click="profileEdit()" >
+      {{buttonValue}}
+    </button>
   </div>
 </div>

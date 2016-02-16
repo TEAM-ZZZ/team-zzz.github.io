@@ -20,6 +20,14 @@ function config($stateProvider, $urlRouterProvider) {
         userProved: ''
       }
     })
+    .state('personalPageEdit', {
+      url: '/profile/zzz/edit',
+      templateUrl: 'app/profile-edit/profile-edit.html',
+      controller: 'profileEditCtrl',
+      params: {
+        userProved: ''
+      }
+    })
   $urlRouterProvider
     .otherwise('/home');
 }

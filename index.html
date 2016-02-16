@@ -4,25 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>mobileApp</title>
-
   <!-- bower:css -->
   <link rel="stylesheet" href="/bower/Materialize/bin/materialize.css">
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/app/content/styles/styles.css">
   <!-- endinject -->
-
-
 </head>
 <body>
+  <div ng-include="'app/layout/topNav.html'" >
+    <!-- here will be inserted header(navigation) -->
+  </div>
 
   <div ui-view>
    <!-- here will be inserted templates -->
   </div>
 
+
   <!-- bower:js -->
   <script src="/bower/angular/angular.js"></script>
   <script src="/bower/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower/angular-mocks/angular-mocks.js"></script>
   <script src="/bower/jquery/dist/jquery.js"></script>
   <script src="/bower/Materialize/bin/materialize.js"></script>
   <!-- endinject -->
@@ -31,12 +33,12 @@
   <script src="/app/app.module.js"></script>
   <script src="/app/content/js/controllers.js"></script>
   <script src="/app/services/someService.service.js"></script>
+  <script src="/app/profile-edit/profile-edit.controller.js"></script>
   <script src="/app/profile/profile.controller.js"></script>
   <script src="/app/login/login.controller.js"></script>
   <script src="/app/layout/topNav.controller.js"></script>
   <script src="/app/components/nameOfDirective.directive.js"></script>
   <script src="/app/app.config.js"></script>
   <!-- endinject -->
-
 </body>
 </html>
