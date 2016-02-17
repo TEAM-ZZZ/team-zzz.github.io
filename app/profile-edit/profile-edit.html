@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row user-info ">
-      <form class="profile-form" action="">
+      <form class="profile-form">
         <div class="container profile-form-container">
           <ul class="collapsible" data-collapsible="accordion">
             <li>
@@ -29,7 +29,7 @@
             </li>
             <li>
               <div class="collapsible-header">
-                <span>Gender : </span> {{ userData.gender}}
+                <span>Gender : </span> {{(userData.gender === 'M') ? 'Male' : 'Female'}}
                  <i class="material-icons right">arrow_drop_down</i>
               </div>
               <div class="collapsible-body">

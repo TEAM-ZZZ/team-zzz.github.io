@@ -13,8 +13,8 @@
 
         var dataObj = {
           avatar: $scope.userData.avatar,
-          firstName: $scope.userData.firstName,
-          lastName: $scope.userData.lastName,
+          firstName: ($scope.fullName.split(' '))[0],
+          lastName: ($scope.fullName.split(' '))[1],
           age: $scope.userData.age,
           gender: $scope.userData.gender
         };
@@ -22,7 +22,7 @@
         var userPromise = $http.post('http://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
 
         console.log("Sent");
-        /*$state.go('personalPage', {userProved: true});*/
+        $state.go('personalPage', {userProved: true});
       };
 
       askForPromise.then(success, errorResponse);
