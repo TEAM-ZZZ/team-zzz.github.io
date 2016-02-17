@@ -16,6 +16,6 @@
      
       return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
     }
-  
+	}
 
 })();
