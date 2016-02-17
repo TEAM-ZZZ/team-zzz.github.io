@@ -8,4 +8,4 @@ To wrok with this project locally:
 * start the project: gulp  (use localhost:8080)
 
 To run tests:
-* npm start - unit tests
+* npm start      - unit tests
