@@ -4,15 +4,20 @@ describe('loginCtrl test', function() {
 
     var mockScope = {};
     var controller;
+    var $state;
+    var $httpBackend;
 
     beforeEach(angular.mock.module("stimulApp"));
 
-    beforeEach(angular.mock.inject(function ($controller, $rootScope) {
+    beforeEach(angular.mock.inject(function ($controller, $rootScope, _$state_, _$httpBackend_) {
 
         mockScope = $rootScope.$new();
+        $state = _$state_;
+        $httpBackend = _$httpBackend_;
 
         controller = $controller("loginCtrl", {
-            $scope: mockScope
+            $scope: mockScope,
+            $state: $state
         });
     }));
 
@@ -32,6 +37,70 @@ describe('loginCtrl test', function() {
 
         expect(mockScope.isLogin).toBeFalsy();
         expect(mockScope.hideBtn).toBeFalsy();
+    });
+
+    it('should transition to personalPage state', function() {
+      $httpBackend.when('GET', 'app/login/login.html').respond(200);
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('homePage');
+
+      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
+      mockScope.isValid('zzz', 'zzz');
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('personalPage');
+
+    });
+
+});
+
+describe('topNavCtrl test', function() {
+
+    var mockScope = {};
+    var controller;
+    var $state;
+    var $httpBackend;
+
+
+    beforeEach(angular.mock.module("stimulApp"));
+
+    beforeEach(angular.mock.inject(function ($controller, $rootScope, _$state_, _$httpBackend_) {
+
+        mockScope = $rootScope.$new();
+        $state = _$state_;
+        $httpBackend = _$httpBackend_;
+
+        controller = $controller("topNavCtrl", {
+            $scope: mockScope,
+            $state: $state
+        });
+    }));
+
+    it("Check, if true, the top navigation is shown", function () {
+      $httpBackend.when('GET', 'app/login/login.html').respond(200);
+      $httpBackend.when('GET', 'app/layout/topNav.html').respond(200);
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('homePage');
+
+      expect(mockScope.show()).toBeFalsy();
+
+      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
+      $state.go('personalPage', {userProved: 'proved'});
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('personalPage');
+
+      expect(mockScope.show()).toBeTruthy();
+
+      $httpBackend.when('GET', 'app/profile-edit/profile-edit.html').respond(200);
+      $state.go('personalPageEdit', {userProved: 'proved'});
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('personalPageEdit');
+
+      expect(mockScope.show()).toBeTruthy();
     });
 
 });
