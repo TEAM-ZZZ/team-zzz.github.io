@@ -7,5 +7,5 @@ To wrok with this project locally:
 * run the command: npm i
 * start the project: gulp  (use localhost:8080)
 
-To run tests:
-* npm start      - unit tests
+To run unit tests:
+* npm start
