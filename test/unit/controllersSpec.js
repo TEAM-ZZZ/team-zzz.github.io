@@ -39,7 +39,7 @@ describe('loginCtrl test', function() {
         expect(mockScope.hideBtn).toBeFalsy();
     });
 
-    it('should transition to personalPage state', function() {
+    it('should go to personalPage state', function() {
       $httpBackend.when('GET', 'app/login/login.html').respond(200);
       mockScope.$apply();
       $httpBackend.flush();
@@ -54,6 +54,8 @@ describe('loginCtrl test', function() {
     });
 
 });
+
+
 
 describe('topNavCtrl test', function() {
 
@@ -87,7 +89,7 @@ describe('topNavCtrl test', function() {
       expect(mockScope.show()).toBeFalsy();
 
       $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
-      $state.go('personalPage', {userProved: 'proved'});
+      $state.go('personalPage', {userProved: true});
       mockScope.$apply();
       $httpBackend.flush();
       expect($state.current.name).toBe('personalPage');
@@ -95,7 +97,7 @@ describe('topNavCtrl test', function() {
       expect(mockScope.show()).toBeTruthy();
 
       $httpBackend.when('GET', 'app/profile-edit/profile-edit.html').respond(200);
-      $state.go('personalPageEdit', {userProved: 'proved'});
+      $state.go('personalPageEdit', {userProved: true});
       mockScope.$apply();
       $httpBackend.flush();
       expect($state.current.name).toBe('personalPageEdit');
@@ -104,6 +106,8 @@ describe('topNavCtrl test', function() {
     });
 
 });
+
+
 
 describe('profileCtrl test', function() {
 
@@ -127,8 +131,19 @@ describe('profileCtrl test', function() {
         });
     }));
 
-    it("", function () {
+    it("should go to personalPageEdit state", function () {
+      $httpBackend.when('GET', 'app/login/login.html').respond(200);
+      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
+      $httpBackend.when('GET', 'http://fathomless-everglades-3680.herokuapp.com/api/user/3').respond(200);
 
+      mockScope.$apply();
+      $httpBackend.flush();
+      mockScope.profileEdit();
+
+      $httpBackend.when('GET', 'app/profile-edit/profile-edit.html').respond(200);
+      mockScope.$apply();
+      $httpBackend.flush();
+      expect($state.current.name).toBe('personalPageEdit');
     });
 
 });
