@@ -6,7 +6,7 @@
     .controller('profileEditCtrl', editProfile);
 
     function editProfile ($scope, $state, dataService, $http){
-      var askForPromise = dataService.getPromise();
+      var askForPromise = dataService.getUserData();
 
       $scope.profileSave = function() {
         $scope.userData.firstName = ($scope.fullName).substr(0, ($scope.fullName).indexOf(' '));
@@ -18,11 +18,17 @@
           age: $scope.userData.age,
           gender: $scope.userData.gender
         };
-        console.log(dataObj);
-        var userPromise = $http.post('http://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
-
-        console.log("Sent");
-        $state.go('personalPage', {userProved: true});
+		
+       dataService.saveUserData(dataObj).then(success, error);
+	   
+       
+	  function success(answer) {
+        console.log(answer);
+      }
+	  
+      function  error(reason) {
+        console.log('Sorry, something went wrong.' + reason)
+      }
       };
 
       askForPromise.then(success, errorResponse);

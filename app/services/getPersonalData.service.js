@@ -7,27 +7,15 @@
 
 	function getData($http, $q){
 
-      var deferObject,
+      
+    this.getUserData = function() {
+      return $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3');
+    };
 
-      myMethods = {
-        getPromise: function() {
-          var promise       =  $http.get('http://fathomless-everglades-3680.herokuapp.com/api/user/3'),
-            deferObject =  deferObject || $q.defer();
-
-			promise.then(
-			  function(answer){
-				deferObject.resolve(answer);
-			  },
-			  function(reason){
-				deferObject.reject(reason);
-			  });
-
-       return deferObject.promise;
-        }
-       };
-
-    return myMethods;
-
+    this.saveUserData = function(dataObj) {
+     
+      return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
     }
+  
 
 })();
