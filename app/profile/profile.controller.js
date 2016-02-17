@@ -8,10 +8,8 @@
     function editProfile ($scope, $state, dataService){
       var askForPromise = dataService.getPromise();
 
-      $scope.buttonValue = 'Edit';
-
       $scope.profileEdit = function() {
-        $state.go('personalPageEdit', {userProved: 'proved'});
+        $state.go('personalPageEdit', {userProved: true});
       };
 
       askForPromise.then(success, errorResponse);

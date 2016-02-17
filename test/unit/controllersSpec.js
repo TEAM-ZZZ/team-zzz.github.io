@@ -104,3 +104,31 @@ describe('topNavCtrl test', function() {
     });
 
 });
+
+describe('profileCtrl test', function() {
+
+    var mockScope = {};
+    var controller;
+    var $state;
+    var $httpBackend;
+
+
+    beforeEach(angular.mock.module("stimulApp"));
+
+    beforeEach(angular.mock.inject(function ($controller, $rootScope, _$state_, _$httpBackend_) {
+
+        mockScope = $rootScope.$new();
+        $state = _$state_;
+        $httpBackend = _$httpBackend_;
+
+        controller = $controller("profileCtrl", {
+            $scope: mockScope,
+            $state: $state
+        });
+    }));
+
+    it("", function () {
+
+    });
+
+});

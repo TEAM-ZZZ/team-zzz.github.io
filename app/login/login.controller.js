@@ -18,7 +18,7 @@
     };
     $scope.isValid = function(login, password) {
       if (login === 'zzz' && password === 'zzz'){
-        $state.go('personalPage', {userProved: 'proved'});
+        $state.go('personalPage', {userProved: true});
       }
     };
   }

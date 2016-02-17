@@ -17,7 +17,7 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/profile/profile.html',
       controller: 'profileCtrl',
       params: {
-        userProved: ''
+        userProved: false
       }
     })
     .state('personalPageEdit', {
@@ -25,7 +25,7 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/profile-edit/profile-edit.html',
       controller: 'profileEditCtrl',
       params: {
-        userProved: ''
+        userProved: false
       }
     })
   $urlRouterProvider

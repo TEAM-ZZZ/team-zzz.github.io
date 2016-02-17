@@ -8,8 +8,6 @@
     function editProfile ($scope, $state, dataService, $http){
       var askForPromise = dataService.getPromise();
 
-      $scope.buttonValue = 'Save';
-
       $scope.profileSave = function() {
         $scope.userData.firstName = ($scope.fullName).substr(0, ($scope.fullName).indexOf(' '));
 
@@ -24,7 +22,7 @@
         var userPromise = $http.post('http://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
 
         console.log("Sent");
-        /*$state.go('personalPage', {userProved: 'proved'});*/
+        /*$state.go('personalPage', {userProved: true});*/
       };
 
       askForPromise.then(success, errorResponse);
