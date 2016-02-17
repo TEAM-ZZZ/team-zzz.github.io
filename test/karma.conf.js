@@ -5,8 +5,9 @@ module.exports = function(config){
 
     files : [
       'bower/angular/angular.js',
-      'bower/angular-ui-route/angular-ui-route.js',
+      'bower/angular-ui-router/release/angular-ui-router.js',
       'bower/angular-mocks/angular-mocks.js',
+      'app/app.module.js',
       'app/*.js',
       'app/**/*.js',
       'test/unit/**/*.js',

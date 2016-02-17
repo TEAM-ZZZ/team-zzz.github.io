@@ -1,18 +1,37 @@
 'use strict';
 
-/* jasmine specs for controllers go here */
+describe('loginCtrl test', function() {
 
-describe('loginCtrl', function() {
+    var mockScope = {};
+    var controller;
 
-  beforeEach(module('stimulApp'));
+    beforeEach(angular.mock.module("stimulApp"));
 
-  describe('$scope.showLogin', function() {
-    it('if showLogin runs it should show login box and hide button', function() {
-      var $scope = {};
-      var controller = $controller('loginCtrl', { $scope: $scope });
-      $scope.showLogin();
-      expect($scope.isLogin).toEqual(true);
-      expect($scope.hideBtn).toEqual(true);
+    beforeEach(angular.mock.inject(function ($controller, $rootScope) {
+
+        mockScope = $rootScope.$new();
+
+        controller = $controller("loginCtrl", {
+            $scope: mockScope
+        });
+    }));
+
+    it("Creation initial property of login status", function () {
+        expect(mockScope.isLogin).toBeFalsy();
     });
-  });
+
+    it("When we click on button Log in, the login window should appear, and button should dissappear", function () {
+        mockScope.showLogin();
+
+        expect(mockScope.isLogin).toBeTruthy();
+        expect(mockScope.hideBtn).toBeTruthy();
+    });
+
+    it("When we click on out of Log in window, the login window should disappear, and button should appear", function () {
+        mockScope.hideLogin();
+
+        expect(mockScope.isLogin).toBeFalsy();
+        expect(mockScope.hideBtn).toBeFalsy();
+    });
+
 });

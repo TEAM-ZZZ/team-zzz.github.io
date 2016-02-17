@@ -11,6 +11,8 @@
       $scope.buttonValue = 'Save';
 
       $scope.profileSave = function() {
+        $scope.userData.firstName = ($scope.fullName).substr(0, ($scope.fullName).indexOf(' '));
+
         var dataObj = {
           avatar: $scope.userData.avatar,
           firstName: $scope.userData.firstName,
