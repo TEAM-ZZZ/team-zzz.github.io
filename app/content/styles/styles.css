@@ -101,3 +101,9 @@ table, .collapsible {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .background {
     background-image: url("../img/bg.jpg"); } }
+
+.side-nav {
+  background-color: #646464; }
+  .side-nav a {
+    color: white;
+    font-size: 18px; }
