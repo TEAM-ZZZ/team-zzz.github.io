@@ -21,22 +21,8 @@ describe('loginCtrl test', function() {
         });
     }));
 
-    it("Creation initial property of login status", function () {
-        expect(mockScope.isLogin).toBeFalsy();
-    });
-
-    it("When we click on button Log in, the login window should appear, and button should dissappear", function () {
-        mockScope.showLogin();
-
-        expect(mockScope.isLogin).toBeTruthy();
-        expect(mockScope.hideBtn).toBeTruthy();
-    });
-
-    it("When we click on out of Log in window, the login window should disappear, and button should appear", function () {
-        mockScope.hideLogin();
-
-        expect(mockScope.isLogin).toBeFalsy();
-        expect(mockScope.hideBtn).toBeFalsy();
+    it("Creation initial property of showError status", function () {
+        expect(mockScope.showError).toBeFalsy();
     });
 
     it('should go to personalPage state', function() {
@@ -108,7 +94,6 @@ describe('topNavCtrl test', function() {
 });
 
 
-
 describe('profileCtrl test', function() {
 
     var mockScope = {};
@@ -131,19 +116,16 @@ describe('profileCtrl test', function() {
         });
     }));
 
-    it("should go to personalPageEdit state", function () {
-      $httpBackend.when('GET', 'app/login/login.html').respond(200);
-      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
-      $httpBackend.when('GET', 'http://fathomless-everglades-3680.herokuapp.com/api/user/3').respond(200);
+    it("first state should be stable", function () {
+        expect(mockScope.selection).toBe('stable');
+    });
 
-      mockScope.$apply();
-      $httpBackend.flush();
-      mockScope.profileEdit();
-
-      $httpBackend.when('GET', 'app/profile-edit/profile-edit.html').respond(200);
-      mockScope.$apply();
-      $httpBackend.flush();
-      expect($state.current.name).toBe('personalPageEdit');
+    it("should chanmockScope.selectionge state of save/edit", function () {
+        expect(mockScope.selection).toBe('stable');
+        mockScope.profileEdit();
+        expect(mockScope.selection).toBe('edit');
+        mockScope.profileSave();
+        expect(mockScope.selection).toBe('stable');
     });
 
 });
