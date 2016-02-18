@@ -30,25 +30,35 @@
   <div class="login-form-wrapper valign-wrapper" ng-show="isLogin" ng-click="hideLogin()">
     <div class=" login-form containter valign center-align" ng-click="$event.stopPropagation()">
       <div class="row">
-        <form action="" class="col s12">
+        <form action="" class="col s12" name="userForm">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
-              <input type="text" id="login"  ng-model="login">
+              <input type="text" id="login"  ng-model="login" ng-minlength="3" name="login" required>
               <label for="login">Login</label>
+			  <span class="error" ng-show="userForm.login.$error.minlength">Login is small</span>
+			  <span class="error" ng-show="userForm.login.$touched && userForm.login.$error.required">The Login is required.</span>
             </div>
+			
+			  
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">lock_outline</i>
-              <input type="password" id="password" ng-model="password">
+              <input type="password" id="password" ng-model="password" ng-minlength="3" name="password">
               <label for="password">Password</label>
+			  <span class="error" ng-show="userForm.password.$error.minlength">Password is small</span>
+			  <span class="error" ng-show="userForm.password.$touched && userForm.password.$error.required">The Password is required.</span>
             </div>
           </div>
           <div class="row">
-            <button  class="btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)">
+		  <div>
+			<span ng-show="showError" class="error">A wrong password or user name.</span>
+			</div>
+            <button type="submit" class="btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)" ng-disabled="userForm.$invalid">
               Sign in
             </button>
+			
           </div>
         </form>
       </div>

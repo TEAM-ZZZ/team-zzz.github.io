@@ -95,3 +95,6 @@ table, .collapsible {
   position: absolute;
   bottom: 50px;
   font-size: 18px; }
+
+.error {
+  color: red; }
