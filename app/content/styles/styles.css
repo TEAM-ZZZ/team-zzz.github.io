@@ -41,17 +41,13 @@
 .brand-logo {
   color: #004d40 !important; }
 
-.login-form-wrapper {
-  width: 100%;
-  position: absolute;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.3); }
-
 .login-form {
+  width: 100%; }
+
+.modal {
+  min-width: 350px !important;
+  width: 35% !important;
   border-radius: 30px;
-  background: white;
   margin: 0 auto;
   position: relative; }
 

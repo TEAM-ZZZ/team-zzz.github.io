@@ -6,14 +6,9 @@
     .controller('loginCtrl', checkLogin);
   function checkLogin ($scope, $state){
     $scope.showError = true;
-    $scope.isLogin = false;
 	  $scope.showError = false;
-    $scope.showLogin = function() {
-      $scope.isLogin = true;
-      $scope.hideBtn = true;
-    };
+
     $scope.hideLogin = function() {
-      $scope.isLogin = false;
       $scope.hideBtn = false;
     };
     $scope.isValid = function(login, password) {
