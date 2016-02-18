@@ -3,15 +3,15 @@
 
   angular
 	.module('stimulApp')
-	.service('dataService', getData)
+	.service('userService', serviceFunction)
 
-	function getData($http){
+	function serviceFunction($http){
 
-    this.getUserData = function() {
+    this.getData = function() {
       return $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3');
     };
 
-    this.saveUserData = function(dataObj) {
+    this.saveData = function(dataObj) {
       return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
     };
 	}
