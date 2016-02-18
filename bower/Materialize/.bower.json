@@ -72,7 +72,6 @@
     "commit": "dc69e030f1c3b4b0da5fbf0e29edac5d09e1829b"
   },
   "_source": "git://github.com/Dogfalo/materialize.git",
-  "_target": "~0.97.5",
-  "_originalSource": "materialize",
-  "_direct": true
+  "_target": "~0.97.2",
+  "_originalSource": "materialize"
 }

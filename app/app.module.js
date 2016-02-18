@@ -2,6 +2,6 @@
 'use strict';
 
 angular
-  .module('stimulApp', ['ui.router']);
+  .module('stimulApp', ['ui.router', 'ui.materialize']);
 
 })();
