@@ -14,6 +14,7 @@
     "angular-mocks": "1.4.x",
     "Materialize": "materialize#~0.97.5",
     "angular-animate": "~1.5.0",
-    "angular-materialize": "~0.1.2"
+    "angular-materialize": "~0.1.2",
+    "angular-messages": "~1.5.0"
   }
 }
