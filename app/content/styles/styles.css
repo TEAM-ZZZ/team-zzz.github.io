@@ -33,7 +33,7 @@
   content: ""; }
 
 .background {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
@@ -95,3 +95,13 @@ table, .collapsible {
   position: absolute;
   bottom: 50px;
   font-size: 18px; }
+
+.error {
+  color: red; }
+
+.collapsible-body label {
+  color: black; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .background {
+    background-image: url("../img/bg.jpg"); } }
