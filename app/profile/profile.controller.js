@@ -6,6 +6,7 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, dataService){
+	 
       dataService.getUserData().then(success, error);
 
       $scope.selection = 'stable';
@@ -15,22 +16,25 @@
       };
 
       $scope.profileSave = function() {
+		  $scope.userData.firstName = $scope.userData.fullName.split(' ')[0];
+		  $scope.userData.lastName = $scope.userData.fullName.split(' ')[1]
         var dataObj = {
           avatar: $scope.userData.avatar,
-          firstName: ($scope.fullName.split(' '))[0],
-          lastName: ($scope.fullName.split(' '))[1],
+          firstName: $scope.userData.firstName,
+          lastName: $scope.userData.lastName,
           age: $scope.userData.age,
           gender: $scope.userData.gender
+		  
         };
-
-        dataService.saveUserData(dataObj).then(success, error);
+		
+        dataService.saveUserData(dataObj).then(successPost, errorPost);
         $scope.selection = 'stable';
-
-        function success(answer) {
+		console.log(dataObj);
+        function successPost(answer) {
           console.log(answer);
         }
 
-        function  error(reason) {
+        function  errorPost(reason) {
           console.log('Sorry, something went wrong.' + reason)
         }
       };
@@ -38,7 +42,7 @@
       function success(answer) {
        console.log(answer.data);
         $scope.userData = answer.data;
-        $scope.fullName = $scope.userData.firstName + ' ' + $scope.userData.lastName;
+        $scope.userData.fullName = $scope.userData.firstName + ' ' + $scope.userData.lastName;
       }
       function  error(reason) {
         console.log('Sorry, something went wrong. The source data is unavailable.' + reason)
