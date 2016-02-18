@@ -13,7 +13,7 @@
   <!-- endinject -->
 </head>
 <body>
-  <div ng-include="'app/layout/topNav.html'" >
+  <div ng-include="'app/topNav/topNav.html'" >
     <!-- here will be inserted header(navigation) -->
   </div>
 
@@ -35,11 +35,10 @@
 
   <!-- inject:js -->
   <script src="/app/app.module.js"></script>
+  <script src="/app/topNav/topNav.controller.js"></script>
   <script src="/app/services/getPersonalData.service.js"></script>
-  <script src="/app/profile-edit/profile-edit.controller.js"></script>
   <script src="/app/profile/profile.controller.js"></script>
   <script src="/app/login/login.controller.js"></script>
-  <script src="/app/layout/topNav.controller.js"></script>
   <script src="/app/app.config.js"></script>
   <!-- endinject -->
 </body>
