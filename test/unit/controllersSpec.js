@@ -81,14 +81,6 @@ describe('topNavCtrl test', function() {
       expect($state.current.name).toBe('personalPage');
 
       expect(mockScope.show()).toBeTruthy();
-
-      $httpBackend.when('GET', 'app/profile-edit/profile-edit.html').respond(200);
-      $state.go('personalPageEdit', {userProved: true});
-      mockScope.$apply();
-      $httpBackend.flush();
-      expect($state.current.name).toBe('personalPageEdit');
-
-      expect(mockScope.show()).toBeTruthy();
     });
 
 });
@@ -124,8 +116,6 @@ describe('profileCtrl test', function() {
         expect(mockScope.selection).toBe('stable');
         mockScope.profileEdit();
         expect(mockScope.selection).toBe('edit');
-        mockScope.profileSave();
-        expect(mockScope.selection).toBe('stable');
     });
 
 });
