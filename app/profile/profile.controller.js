@@ -6,7 +6,7 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, dataService){
-      var askForPromise = dataService.getPromise();
+      var askForPromise = dataService.getUserData();
 
       $scope.profileEdit = function() {
         $state.go('personalPageEdit', {userProved: true});

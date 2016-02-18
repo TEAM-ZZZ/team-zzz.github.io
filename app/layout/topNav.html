@@ -1,9 +1,16 @@
 <header  class="row header" ng-controller="topNavCtrl" ng-show="show()">
-  <nav>
+	<nav>
     <div class="nav-wrapper profile-navbar teal">
-        <a href = "http://www.pizza.by/">
-          <i class="material-icons ">menu</i>
-        </a>
-      </div>
+			<a class="btn-floating btn-large green" ng-click="click()">
+        <i class="large mdi-navigation-menu"></i>
+			 </a>	     
+    </div>
   </nav>
+	<ul ng-show="showME" class="topnav">
+		<li>Home</li>
+		<li>Contacts</li>
+		<li>Messages</li>
+		<li>News</li>
+		<li>Settings</li>
+	</ul>
 </header>
