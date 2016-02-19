@@ -7,20 +7,6 @@
 
     function editProfile ($scope, $state, userService){
 			$scope.onSubmit;
-			$scope.validName = function() {
-				$scope.showError = true;
-				if (typeof $scope.userData.fullName === "undefined" || $scope.userData.fullName == ""){
-					$scope.showError = true;
-				} else { $scope.showError = false;
-        }};
-				
-				$scope.validAge = function() {
-				$scope.showError = true;
-				if (typeof $scope.userData.age === "undefined" || $scope.userData.age == ""){
-					$scope.showError = true;
-				} else { $scope.showError = false;
-        }};
-				
       userService.getData().then(success, error);
 
       $scope.selection = 'stable';
