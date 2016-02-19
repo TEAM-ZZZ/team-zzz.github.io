@@ -89,9 +89,6 @@ input::-webkit-inner-spin-button {
 height:100vh;
   background-color:$teal_lighten;
 }
-
-
-
 .white-text{
 color:$white;
 }
@@ -127,4 +124,12 @@ font-size:20px!important;
     color: white;
     font-size:18px;
   }
+}
+
+.container.inner-container-min {
+  width: 400px;
+}
+
+.user-info {
+  padding-top: 15px;
 }

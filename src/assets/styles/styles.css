@@ -107,3 +107,9 @@ table, .collapsible {
   .side-nav a {
     color: white;
     font-size: 18px; }
+
+.container.inner-container-min {
+  width: 400px; }
+
+.user-info {
+  padding-top: 15px; }
