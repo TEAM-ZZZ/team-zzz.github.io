@@ -134,6 +134,7 @@ table,.collapsible{
     color:black;
   }
 }
+<<<<<<< HEAD
 @media only screen and (min-width : 720px) {
   .background {
     background-image: url("../img/bg-desktop.jpg");
@@ -154,6 +155,12 @@ table,.collapsible{
   }
   .greeting h2 {
     font-size: 70px;
+=======
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
+  .background{
+    background-image: url("../img/bg.jpg");
+>>>>>>> c873e8fa2706fa6676d855179b888e9ef6d3a952
   }
 }
 .side-nav{
@@ -168,4 +175,10 @@ table,.collapsible{
 }
 .user-info {
   padding-top: 15px;
+}
+
+.menu{
+  &-icons,&-link{
+    display:inline-block!important;
+  }
 }

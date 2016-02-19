@@ -122,7 +122,11 @@ table, .collapsible {
 .collapsible-body label {
   color: black; }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 720px) {
+=======
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+>>>>>>> c873e8fa2706fa6676d855179b888e9ef6d3a952
   .background {
     background-image: url("../img/bg-desktop.jpg"); } }
 
@@ -151,3 +155,6 @@ table, .collapsible {
 
 .user-info {
   padding-top: 15px; }
+
+.menu-icons, .menu-link {
+  display: inline-block !important; }

@@ -13,10 +13,17 @@
         $('#loginWindow').closeModal();
         $state.go('personalPage');
       } else {
-        $scope.showError = true;
+        $scope.showError = 'true' 
+		
       }
     };
-
+	
+	 $scope.resetA = function() {
+        $scope.temp={};
+		$scope.userForm.$setUntouched();
+		$scope.userForm.$setUntouched();
+        
+    }  
 
 
     $(document).ready(function(){

@@ -1,0 +1,8 @@
+
+	[
+		{"photo": "app/content/img/motorola.jpg","description":"telephone with bluetooth", "cost": "300"},
+		{"photo": "app/content/img/nokia.jpg","description":"smartphone", "cost": "500"},
+		{"photo": "app/content/img/iphone.jpg","description":"telephone with wi-fi", "cost": "800"},
+		{"photo": "app/content/img/samsung.jpg","description":"smartphone", "cost": "600"},
+		{"photo": "app/content/img/nokiaBig.jpg","description":"smartphone with big display", "cost": "700"}
+	]
