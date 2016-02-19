@@ -12,6 +12,9 @@
 
       $scope.profileEdit = function() {
         $scope.selection = 'edit';
+        setTimeout(function(){
+          $('.collapsible').collapsible({accordion : false});
+        }, 1000);
       };
       $scope.profileSave = function() {
   		  var dataObj = null;
@@ -45,6 +48,12 @@
       function  errorPost(reason) {
         console.log('Sorry, something went wrong.' + reason);
       }
+
+       $(document).ready(function(){
+        $('.collapsible').collapsible({
+          accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+      });
     };
 
 })();
