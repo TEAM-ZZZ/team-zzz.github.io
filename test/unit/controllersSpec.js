@@ -26,12 +26,12 @@ describe('loginCtrl test', function() {
     });
 
     it('should go to personalPage state', function() {
-      $httpBackend.when('GET', 'app/login/login.html').respond(200);
+      $httpBackend.when('GET', 'src/app/login/login.html').respond(200);
       mockScope.$apply();
       $httpBackend.flush();
       expect($state.current.name).toBe('homePage');
 
-      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
+      $httpBackend.when('GET', 'src/app/profile/profile.html').respond(200);
       mockScope.isValid('zzz', 'zzz');
       mockScope.$apply();
       $httpBackend.flush();
@@ -66,15 +66,15 @@ describe('topNavCtrl test', function() {
     }));
 
     it("Check, if true, the top navigation is shown", function () {
-      $httpBackend.when('GET', 'app/login/login.html').respond(200);
-      $httpBackend.when('GET', 'app/layout/topNav.html').respond(200);
+      $httpBackend.when('GET', 'src/app/login/login.html').respond(200);
+      $httpBackend.when('GET', 'src/app/topNav/topNav.html').respond(200);
       mockScope.$apply();
       $httpBackend.flush();
       expect($state.current.name).toBe('homePage');
 
       expect(mockScope.show()).toBeFalsy();
 
-      $httpBackend.when('GET', 'app/profile/profile.html').respond(200);
+      $httpBackend.when('GET', 'src/app/profile/profile.html').respond(200);
       $state.go('personalPage', {userProved: true});
       mockScope.$apply();
       $httpBackend.flush();
@@ -112,7 +112,7 @@ describe('profileCtrl test', function() {
         expect(mockScope.selection).toBe('stable');
     });
 
-    it("should chanmockScope.selectionge state of save/edit", function () {
+    it("should toggle mockScope.selection state of save/edit", function () {
         expect(mockScope.selection).toBe('stable');
         mockScope.profileEdit();
         expect(mockScope.selection).toBe('edit');

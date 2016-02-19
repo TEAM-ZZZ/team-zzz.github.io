@@ -32,21 +32,22 @@ gulp.task('ngAnnotate', function() {
 
 // sort Angular JS app files and inject all files for development
 gulp.task('sort_inject', function() {
-  return gulp.src('app/index.html')
+  return gulp.src('src/index.html')
     .pipe(inject(
       gulp.src(mainBowerFiles({
           paths: {
             bowerDirectory: 'bower',
             bowerrc: '.bowerrc',
             bowerJson: 'bower.json'
-          }
+          },
+          includeDev: true
         }), {read: false}), {name: 'bower'}))
     .pipe(inject(
-      gulp.src(['app/*.js','app/**/*.js'])
+      gulp.src(['src/app/*.js','src/app/**/*.js'])
         .pipe(angularFilesort())
     ))
     .pipe(inject(
-      gulp.src(['app/content/styles/*.css'])
+      gulp.src(['src/assets/styles/*.css'])
     ))
     .pipe(gulp.dest(''))
     .pipe(notify('sort and inject Done! :)'));
@@ -54,7 +55,7 @@ gulp.task('sort_inject', function() {
 
 // compile scss into css
 gulp.task('css', function() {
-   return gulp.src('app/content/styles/styles.scss')
+   return gulp.src('src/assets/styles/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['> 1%', 'IE 9'],
@@ -62,7 +63,7 @@ gulp.task('css', function() {
         }))
     //.pipe(minifyCss({compatibility: 'ie9'}))
     .pipe(rename('styles.css'))
-    .pipe(gulp.dest('app/content/styles'))
+    .pipe(gulp.dest('src/assets/styles/'))
     .pipe(connect.reload())
     .pipe(notify('CSS Done! :)'));
 });
@@ -78,21 +79,22 @@ gulp.task('css', function() {
 
 // html
 gulp.task('html', function(){
-  return gulp.src('app/index.html')
+  return gulp.src('src/index.html')
   .pipe(inject(
     gulp.src(mainBowerFiles({
       paths: {
         bowerDirectory: 'bower',
         bowerrc: '.bowerrc',
         bowerJson: 'bower.json'
-      }
+      },
+          includeDev: true
     }), {read: false}), {name: 'bower'}))
   .pipe(inject(
-    gulp.src(['app/*.js','app/**/*.js'])
+    gulp.src(['src/app/*.js','src/app/**/*.js'])
       .pipe(angularFilesort())
   ))
   .pipe(inject(
-    gulp.src(['app/content/styles/*.css'])
+    gulp.src(['src/assets/styles/*.css'])
   ))
   .pipe(gulp.dest(''))
   .pipe(notify('sort and inject Done! :)'))
@@ -102,8 +104,8 @@ gulp.task('html', function(){
 
 // watch
 gulp.task('watch', function(){
-  gulp.watch('app/content/styles/styles.scss', ['css']);
-  gulp.watch('app/index.html', ['html']);
+  gulp.watch('src/assets/styles/styles.scss', ['css']);
+  gulp.watch('src/index.html', ['html']);
 });
 
 // default

@@ -10,15 +10,10 @@
   <!-- endinject -->
 </head>
 <body>
-  <div ng-include="'app/topNav/topNav.html'" >
-    <!-- here will be inserted header(navigation) -->
-  </div>
 
-  <div ui-view>
-   <!-- here will be inserted templates -->
-  </div>
+  <div ui-view="topNav"></div>
+  <div ui-view="content"></div>
 
-  <script src="/bower/jquery/dist/jquery.js"></script>
   <!-- bower:js -->
   <!-- endinject -->
 

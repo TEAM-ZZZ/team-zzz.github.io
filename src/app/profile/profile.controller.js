@@ -14,11 +14,12 @@
         $scope.selection = 'edit';
       };
       $scope.profileSave = function() {
-  		  $scope.userData.firstName = $scope.userData.fullName.split(' ')[0];
-  		  $scope.userData.lastName = $scope.userData.fullName.split(' ')[1];
+  		  var dataObj = null;
         $scope.selection = 'stable';
+        $scope.userData.firstName = $scope.userData.fullName.split(' ')[0];
+  		  $scope.userData.lastName = $scope.userData.fullName.split(' ')[1];
 
-        var dataObj = {
+        dataObj = {
           avatar: $scope.userData.avatar,
           firstName: $scope.userData.firstName,
           lastName: $scope.userData.lastName,
@@ -28,6 +29,8 @@
 
         userService.saveData(dataObj).then(successPost, errorPost);
       };
+
+
 
       function success(answer) {
         $scope.userData = answer.data;

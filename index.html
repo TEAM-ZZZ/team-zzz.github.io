@@ -5,46 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>mobileApp</title>
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower/materialize/bin/materialize.css">
-
   <link rel="stylesheet" href="/bower/Materialize/bin/materialize.css">
-
-  <link rel="stylesheet" href="/bower/materialize/bin/materialize.css">
-
   <!-- endinject -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="/app/content/styles/styles.css">
+  <link rel="stylesheet" href="/src/assets/styles/styles.css">
   <!-- endinject -->
 </head>
 <body>
-  <div ng-include="'app/topNav/topNav.html'" >
-    <!-- here will be inserted header(navigation) -->
-  </div>
 
-  <div ui-view>
-   <!-- here will be inserted templates -->
-  </div>
+  <div ui-view="topNav"></div>
+  <div ui-view="content"></div>
 
-  <script src="/bower/jquery/dist/jquery.js"></script>
   <!-- bower:js -->
+  <script src="/bower/jquery/dist/jquery.js"></script>
   <script src="/bower/angular/angular.js"></script>
   <script src="/bower/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="/bower/angular-mocks/angular-mocks.js"></script>
-  <script src="/bower/angular-animate/angular-animate.js"></script>
-  <script src="/bower/materialize/bin/materialize.js"></script>
-  <script src="/bower/materialize/bin/materialize.js"></script>
-  <script src="/bower/angular-messages/angular-messages.js"></script>
   <script src="/bower/Materialize/bin/materialize.js"></script>
-  <script src="/bower/angular-materialize/src/angular-materialize.js"></script>
+  <script src="/bower/angular-animate/angular-animate.js"></script>
+  <script src="/bower/angular-messages/angular-messages.js"></script>
   <!-- endinject -->
 
   <!-- inject:js -->
-  <script src="/app/app.module.js"></script>
-  <script src="/app/topNav/topNav.controller.js"></script>
-  <script src="/app/services/user.service.js"></script>
-  <script src="/app/profile/profile.controller.js"></script>
-  <script src="/app/login/login.controller.js"></script>
-  <script src="/app/app.config.js"></script>
+  <script src="/src/app/app.module.js"></script>
+  <script src="/src/app/topNav/topNav.controller.js"></script>
+  <script src="/src/app/services/user.service.js"></script>
+  <script src="/src/app/profile/profile.controller.js"></script>
+  <script src="/src/app/login/login.controller.js"></script>
+  <script src="/src/app/app.config.js"></script>
   <!-- endinject -->
 </body>
 </html>
