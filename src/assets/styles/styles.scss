@@ -89,9 +89,6 @@ input::-webkit-inner-spin-button {
 height:100vh;
   background-color:$teal_lighten;
 }
-
-
-
 .white-text{
 color:$white;
 }
@@ -116,7 +113,7 @@ font-size:20px!important;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
   .background{
     background-image: url("../img/bg.jpg");
   }
@@ -126,5 +123,19 @@ font-size:20px!important;
   a{
     color: white;
     font-size:18px;
+  }
+}
+
+.container.inner-container-min {
+  width: 400px;
+}
+
+.user-info {
+  padding-top: 15px;
+}
+
+.menu{
+  &-icons,&-link{
+    display:inline-block!important;
   }
 }

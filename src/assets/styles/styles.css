@@ -98,7 +98,7 @@ table, .collapsible {
 .collapsible-body label {
   color: black; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
   .background {
     background-image: url("../img/bg.jpg"); } }
 
@@ -107,3 +107,12 @@ table, .collapsible {
   .side-nav a {
     color: white;
     font-size: 18px; }
+
+.container.inner-container-min {
+  width: 400px; }
+
+.user-info {
+  padding-top: 15px; }
+
+.menu-icons, .menu-link {
+  display: inline-block !important; }

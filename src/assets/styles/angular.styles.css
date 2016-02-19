@@ -1,0 +1,30 @@
+.animate-switch-container {
+  width: 400px;
+  margin: 0 auto;
+  position:relative;
+}
+
+.animate-switch {
+
+}
+
+.animate-switch.ng-animate {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.animate-switch.ng-leave.ng-leave-active {
+  left: -1000px;
+}
+.animate-switch.ng-leave {
+  left: 0;
+}
+
+.animate-switch.ng-enter {
+  right: -1000px;
+}
+.animate-switch.ng-enter.ng-enter-active {
+  right: 0;
+}

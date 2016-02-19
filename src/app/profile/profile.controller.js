@@ -6,6 +6,21 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, userService){
+			$scope.onSubmit;
+			$scope.validName = function() {
+				$scope.showError = true;
+				if (typeof $scope.userData.fullName === "undefined" || $scope.userData.fullName == ""){
+					$scope.showError = true;
+				} else { $scope.showError = false;
+        }};
+				
+				$scope.validAge = function() {
+				$scope.showError = true;
+				if (typeof $scope.userData.age === "undefined" || $scope.userData.age == ""){
+					$scope.showError = true;
+				} else { $scope.showError = false;
+        }};
+				
       userService.getData().then(success, error);
 
       $scope.selection = 'stable';
@@ -14,7 +29,7 @@
         $scope.selection = 'edit';
         setTimeout(function(){
           $('.collapsible').collapsible({accordion : false});
-        }, 1000);
+        }, 100);
       };
       $scope.profileSave = function() {
   		  var dataObj = null;
@@ -48,12 +63,6 @@
       function  errorPost(reason) {
         console.log('Sorry, something went wrong.' + reason);
       }
-
-       $(document).ready(function(){
-        $('.collapsible').collapsible({
-          accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-        });
-      });
     };
 
 })();

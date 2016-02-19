@@ -9,8 +9,8 @@
     <div class="animate-switch-container" ng-switch on="selection">
 
       <div class="animate-switch" ng-switch-when="stable">
-        <div class="container center-align">
-          <div class="row user-info ">
+        <div class="container inner-container-min center-align">
+          <div class="row user-info">
             <table class="centered bordered">
               <tbody>
                 <tr>
@@ -37,7 +37,7 @@
       <div class="animate-switch" ng-switch-when="edit">
         <div class="row user-info ">
           <form class="profile-form">
-            <div class="container profile-form-container">
+            <div class="container inner-container-min profile-form-container">
               <ul class="collapsible" data-collapsible="accordion">
                 <li>
                   <div class="collapsible-header">
@@ -45,7 +45,11 @@
                     <i class="material-icons right">arrow_drop_down</i>
                   </div>
                   <div class="collapsible-body">
-                    <input type="text" ng-model="userData.fullName" placeholder = "Name" class="inMargin">
+                    <form name="formName" ng-submit="onSubmit(formName)" novalidate>
+											<input type="text" ng-model="userData.fullName" ng-change="validName()"
+											placeholder = "Name" class="inMargin" ng-pattern = "/^([a-zA-Zа-яА-ЯёЁ\s]*)$/" />
+											<span ng-show="showError">Please enter the correct name!</span>
+										</form>
                   </div>
                 </li>
                 <li>
@@ -54,7 +58,11 @@
                     <i class="material-icons right">arrow_drop_down</i>
                   </div>
                   <div class="collapsible-body">
-                    <input type="number" ng-model="userData.age" placeholder="Age" class="inMargin">
+                    <form name="formAge" ng-submit="onSubmit(formAge)" novalidate>
+											<input type="text" ng-model="userData.age"  ng-change="validAge()"
+											placeholder="Age" class="inMargin" ng-pattern = "/^(0|[1-9][0-9]*)$/" />
+											<span ng-show="showError">Please enter the correct age!</span>
+										</form>
                   </div>
                 </li>
                 <li>
@@ -79,6 +87,7 @@
           </form>
         </div>
       </div>
+
 
     </div>
   </div>
