@@ -57,9 +57,6 @@ body {
   margin: 0 auto;
   position: relative; }
 
-.nav-wrapper {
-  color: #00796B !important; }
-
 .user-image {
   padding: 25px 0 20px;
   background-color: #009688; }
@@ -122,11 +119,7 @@ table, .collapsible {
 .collapsible-body label {
   color: black; }
 
-<<<<<<< HEAD
 @media only screen and (min-width: 720px) {
-=======
-@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
->>>>>>> c873e8fa2706fa6676d855179b888e9ef6d3a952
   .background {
     background-image: url("../img/bg-desktop.jpg"); } }
 
@@ -148,7 +141,7 @@ table, .collapsible {
   background-color: #004d40; }
   .side-nav a {
     color: white;
-    font-size: 18px; }
+    font-size: 22px; }
 
 .container.inner-container-min {
   width: 400px; }

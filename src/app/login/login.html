@@ -14,15 +14,9 @@
       <h2 class='center-align '>Welcome to the Stimul<span class="white-text teal darken-4 circle">US</span></h2>
     </div>
   	<div class="greeting-info">
-      <p>
-        <span class="white-text">Learn more about people around you
-      </p>
-      <p>
-        <span class="white-text">Find more about what you are intrested in
-      </p>
-      <p>
-        <span class="white-text">Share your news
-      </p>
+      <p><span class="white-text">Learn more about people around you</span></p>
+      <p><span class="white-text">Find more about what you are intrested in</span></p>
+      <p><span class="white-text">Share your news</span></p>
   	</div>
   </div>
   <div class="modal" id="loginWindow">
@@ -35,10 +29,10 @@
                 <i class="material-icons prefix">account_circle</i>
                 <input type="text" id="login"  ng-model="temp.login" ng-minlength="3" name="login" required>
                 <label for="login">Login</label>
-				 <div ng-messages="userForm.login.$error" ng-if="userForm.login.$touched" class="error">
-				   <div ng-message="required">This field is required.</div>
-				   <div ng-message="minlength">The min length is 3.</div>
-			     </div>
+				        <div ng-messages="userForm.login.$error" ng-if="userForm.login.$touched" class="error">
+      				    <div ng-message="required">This field is required.</div>
+      				    <div ng-message="minlength">The min length is 3.</div>
+      			    </div>
               </div>
             </div>
             <div class="row">
@@ -46,23 +40,19 @@
                 <i class="material-icons prefix">lock_outline</i>
                 <input type="password" id="password" ng-model="temp.password" ng-minlength="3" name="password" required>
                 <label for="password">Password</label>
-				<div ng-messages="userForm.password.$error" ng-if="userForm.password.$touched" class="error">
-				   <div ng-message="required">This field is required.</div>
-				   <div ng-message="minlength">The min length is 3.</div>
-			     </div>
+        				<div ng-messages="userForm.password.$error" ng-if="userForm.password.$touched" class="error">
+        				  <div ng-message="required">This field is required.</div>
+        				  <div ng-message="minlength">The min length is 3.</div>
+			          </div>
               </div>
             </div>
             <div class="row">
   		        <div>
   			       <span ng-show="showError" class="error">A wrong password or user name.</span>
-  			      </div>  
+  			      </div>
               <div class="modal-footer ">
-               <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)" ng-disabled="userForm.$invalid">
-                Sign in
-                </button>
-				<button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="resetA(userForm)" >
-                 Reset
-                </button>
+                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(temp.login, temp.password)" ng-disabled="userForm.$invalid">Sign in</button>
+				        <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="resetA(userForm)">Reset</button>
               </div>
             </div>
           </form>

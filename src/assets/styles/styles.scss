@@ -63,9 +63,6 @@ body {
   margin:0 auto;
   position:relative;
 }
-.nav-wrapper{
-  color: $teal_darken!important;
-}
 .user-image{
   padding: 25px 0 20px;
   background-color: $teal_lighten;
@@ -134,7 +131,6 @@ table,.collapsible{
     color:black;
   }
 }
-<<<<<<< HEAD
 @media only screen and (min-width : 720px) {
   .background {
     background-image: url("../img/bg-desktop.jpg");
@@ -155,19 +151,13 @@ table,.collapsible{
   }
   .greeting h2 {
     font-size: 70px;
-=======
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
-  .background{
-    background-image: url("../img/bg.jpg");
->>>>>>> c873e8fa2706fa6676d855179b888e9ef6d3a952
   }
 }
 .side-nav{
   background-color:#004d40;
   a{
     color: white;
-    font-size:18px;
+    font-size:22px;
   }
 }
 .container.inner-container-min {
@@ -180,5 +170,5 @@ table,.collapsible{
 .menu{
   &-icons,&-link{
     display:inline-block!important;
-  }
+ }
 }

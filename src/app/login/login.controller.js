@@ -13,22 +13,16 @@
         $('#loginWindow').closeModal();
         $state.go('personalPage');
       } else {
-        $scope.showError = 'true' 
-		
+        $scope.showError = 'true';
       }
     };
-	
-	 $scope.resetA = function() {
-        $scope.temp={};
-		$scope.userForm.$setUntouched();
-		$scope.userForm.$setUntouched();
-        
-    }  
 
+	  $scope.resetA = function() {
+      $scope.temp={};
+  		$scope.userForm.$setUntouched();
+  		$scope.userForm.$setPristine();
+    }
 
-    $(document).ready(function(){
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-      $('.modal-trigger').leanModal();
-    });
+    $('.modal-trigger').leanModal();
   }
 })();
