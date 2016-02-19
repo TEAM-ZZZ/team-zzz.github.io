@@ -1,8 +1,22 @@
-
-	[
-		{"date":"12.02.2016","message":"Hello, how are you?"},
-		{"date":"14.02.2016","message":"I'm fine!"},
-		{"date":"14.02.2016","message":"And you?"},
-		{"date":"16.02.2016","message":"I'm too!"},
-		{"date":"18.02.2016","message":"It's a very good!"}
-	]
+[
+	{
+    "date":"12.02.2016",
+  "message":"Hello, how are you?"
+  },
+	{
+    "date":"14.02.2016",
+  "message":"I'm fine!"
+  },
+	{
+    "date":"14.02.2016",
+  "message":"And you?"
+  },
+	{
+    "date":"16.02.2016",
+  "message":"Me too!"
+  },
+	{
+    "date":"18.02.2016",
+  "message":"It's a very good!"
+  }
+]

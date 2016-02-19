@@ -57,7 +57,7 @@ body {
 }
 .modal{
   top: 0!important;
-  min-width: 350px!important;
+  min-width: 250px!important;
   width: 35%!important;
   border-radius: 30px;
   margin:0 auto;
@@ -69,6 +69,7 @@ body {
 }
 .profile-img{
   max-height:150px;
+  box-shadow: 0px 0px 15px black;
 }
 .profile-form{
   text-align:center;
@@ -171,4 +172,10 @@ table,.collapsible{
   &-icons,&-link{
     display:inline-block!important;
  }
+}
+nav .button-collapse i {
+  transition: all ease 0.5s;
+}
+nav .button-collapse i:hover {
+  transform: rotate(180deg);
 }
