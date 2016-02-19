@@ -6,5 +6,11 @@
 
   function topNav($scope, $state){
 
+
+
+
+    $('.button-collapse').sideNav({
+      closeOnClick: true
+    });
   }
 })();
