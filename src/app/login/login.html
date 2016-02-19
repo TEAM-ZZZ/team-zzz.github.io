@@ -31,32 +31,39 @@
     <div class=" valign-wrapper" >
       <div class="login-form containter valign center-align">
         <div class="row">
-          <form class="col s12" name="userForm">
+          <form class="col s12" name="userForm" novalidate >
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input type="text" id="login"  ng-model="login" ng-minlength="3" name="login" required>
+                <input type="text" id="login"  ng-model="temp.login" ng-minlength="3" name="login" required>
                 <label for="login">Login</label>
-  			        <span class="error" ng-show="userForm.login.$error.minlength">Login is small</span>
-  			        <span class="error" ng-show="userForm.login.$touched && userForm.login.$error.required">The Login is required.</span>
+				 <div ng-messages="userForm.login.$error" ng-if="userForm.login.$touched" class="error">
+				   <div ng-message="required">This field is required.</div>
+				   <div ng-message="minlength">The min length is 3.</div>
+			     </div>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">lock_outline</i>
-                <input type="password" id="password" ng-model="password" ng-minlength="3" name="password">
+                <input type="password" id="password" ng-model="temp.password" ng-minlength="3" name="password" required>
                 <label for="password">Password</label>
-        			  <span class="error" ng-show="userForm.password.$error.minlength">Password is small</span>
-        			  <span class="error" ng-show="userForm.password.$touched && userForm.password.$error.required">The Password is required.</span>
+				<div ng-messages="userForm.password.$error" ng-if="userForm.password.$touched" class="error">
+				   <div ng-message="required">This field is required.</div>
+				   <div ng-message="minlength">The min length is 3.</div>
+			     </div>
               </div>
             </div>
             <div class="row">
   		        <div>
   			       <span ng-show="showError" class="error">A wrong password or user name.</span>
-  			      </div>
+  			      </div>  
               <div class="modal-footer ">
-               <button type="submit" class="modal-action modal-close btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)" ng-disabled="userForm.$invalid">
+               <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(login, password)" ng-disabled="userForm.$invalid">
                 Sign in
+                </button>
+				<button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="resetA(userForm)" >
+                 Reset
                 </button>
               </div>
             </div>
