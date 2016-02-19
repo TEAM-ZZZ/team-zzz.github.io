@@ -1,7 +1,7 @@
 $white:#fff;
 $teal:#26a69a;
-$teal_darken:#004d40;
-$teal_lighten:#b2dfdb;
+$teal_darken:#00796B;
+$teal_lighten:#009688;
 /*---------added google icons ----------*/
 @font-face {
   font-family: 'Material Icons';
@@ -9,7 +9,10 @@ $teal_lighten:#b2dfdb;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
-
+body {
+  min-height:500px;
+  position: relative;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -39,7 +42,7 @@ $teal_lighten:#b2dfdb;
   content: "";
 }
 .background{
-  background-image: url("../img/bg-desktop.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -50,17 +53,22 @@ $teal_lighten:#b2dfdb;
 }
 .login-form{
   width:100%;
+  padding-top:25px;
 }
 .modal{
+  top: 0!important;
   min-width: 350px!important;
   width: 35%!important;
   border-radius: 30px;
   margin:0 auto;
   position:relative;
 }
-
+.nav-wrapper{
+  color: $teal_darken!important;
+}
 .user-image{
-  padding-top:2rem;
+  padding: 25px 0 20px;
+  background-color: $teal_lighten;
 }
 .profile-img{
   max-height:150px;
@@ -75,8 +83,12 @@ $teal_lighten:#b2dfdb;
 .header{
   margin-bottom:0!important;
 }
-.greeting{
+.greeting {
   color:$teal_darken;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 360px;
+  text-shadow: 0 0 5px white;
 }
 
 input::-webkit-outer-spin-button,
@@ -86,22 +98,32 @@ input::-webkit-inner-spin-button {
 }
 
 .profile-wrapper{
-height:100vh;
-  background-color:$teal_lighten;
+  height:100vh;
+  /* background-color:$teal_lighten; */
 }
 .white-text{
-color:$white;
+  color:$white;
 }
 .inMargin{
   font-size:20px!important;
   text-indent:15px!important;
 }
 table,.collapsible{
-font-size:20px!important;
+  font-size:20px!important;
 }
-.greeting-info{
+.greeting-info-wrapper {
+  text-align: center;
+}
+.greeting-info {
+  display: inline-block;
+  padding: 15px 5px;
+  width: 360px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px;
 	position: absolute;
 	bottom: 50px;
+  margin-left: -180px;
 	font-size:18px;
 }
 .error{
@@ -112,24 +134,38 @@ font-size:20px!important;
     color:black;
   }
 }
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .background{
-    background-image: url("../img/bg.jpg");
+@media only screen and (min-width : 720px) {
+  .background {
+    background-image: url("../img/bg-desktop.jpg");
+  }
+}
+@media only screen and (min-width : 600px) {
+  .greeting-info {
+    padding: 15px;
+    width: 500px;
+    background-color: rgba(0,0,0,0.5);
+    bottom: 50px;
+    margin-left: -250px;
+    font-size:20px;
+  }
+  .greeting {
+    margin-top: 20px;
+    width: 500px;
+  }
+  .greeting h2 {
+    font-size: 70px;
   }
 }
 .side-nav{
-  background-color:#646464;
+  background-color:#004d40;
   a{
     color: white;
     font-size:18px;
   }
 }
-
 .container.inner-container-min {
   width: 400px;
 }
-
 .user-info {
   padding-top: 15px;
 }
