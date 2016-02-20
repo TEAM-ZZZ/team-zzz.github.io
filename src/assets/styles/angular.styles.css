@@ -1,7 +1,9 @@
 .animate-switch-container {
-  width: 400px;
+  min-width: 380px;
+  min-height: 350px;
   margin: 0 auto;
   position:relative;
+  overflow: hidden;
 }
 
 .animate-switch {
