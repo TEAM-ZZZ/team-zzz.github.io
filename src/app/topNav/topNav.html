@@ -1,13 +1,15 @@
 <header class="wrapper-header">
- <nav>
-    <div class="nav-wrapper teal darken-3">
-      <a href="" class="button-collapse burger-rotate" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
-      <ul class="side-nav" id="mobile-demo">
-        <li><i class="material-icons menu-icons">account_box</i><a ui-sref="personalPage" class="menu-link">Profile</a></li>
-        <li><i class="material-icons menu-icons">content_paste</i><a ui-sref="history" class="menu-link">History</a></li>
-        <li><i class="material-icons menu-icons">chat</i><a ui-sref="messages" class="menu-link">Messages</a></li>
-        <li><i class="material-icons menu-icons">highlight_off</i><a ui-sref="homePage" class="menu-link">Logout</a></li>
-      </ul>
+  <nav class="top-nav teal darken-3">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="" class="button-collapse burger-rotate" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+      </div>
     </div>
   </nav>
+  <ul class="side-nav fixed" id="mobile-demo">
+    <li><a ui-sref="personalPage" class="waves-effect waves-teal"><i class="material-icons menu-icons">account_box</i> Profile</a></li>
+    <li><a ui-sref="history" class="waves-effect waves-teal"><i class="material-icons menu-icons">content_paste</i> History</a></li>
+    <li><a ui-sref="messages" class="waves-effect waves-teal"><i class="material-icons menu-icons">chat</i> Messages</a></li>
+    <li><a ui-sref="homePage" class="waves-effect waves-teal"><i class="material-icons menu-icons">highlight_off</i> Logout</a></li>
+  </ul>
 </header>

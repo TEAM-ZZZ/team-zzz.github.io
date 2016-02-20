@@ -43,7 +43,7 @@ body {
   height: 100vh; }
 
 .brand-logo {
-  color: #00796B !important; }
+  color: #003320 !important; }
 
 .login-form {
   width: 100%;
@@ -138,11 +138,19 @@ table, .collapsible {
   .greeting h2 {
     font-size: 70px; } }
 
-.side-nav {
-  background-color: #004d40; }
-  .side-nav a {
+.side-nav.fixed {
+  background-color: #004E43; }
+  .side-nav.fixed li:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .side-nav.fixed a, .side-nav.fixed i {
     color: white;
-    font-size: 22px; }
+    font-size: 22px;
+    background-color: #004E43;
+    vertical-align: middle; }
+  .side-nav.fixed i {
+    vertical-align: middle;
+    margin-right: 20px;
+    font-size: 24px; }
 
 .container.inner-container-min {
   width: 400px; }
@@ -161,3 +169,6 @@ nav .button-collapse i:hover {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
+
+.modal-footer.center-align .btn {
+  float: none; }

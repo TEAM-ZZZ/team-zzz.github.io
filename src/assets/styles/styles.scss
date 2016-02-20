@@ -2,6 +2,7 @@ $white:#fff;
 $teal:#26a69a;
 $teal_darken:#00796B;
 $teal_lighten:#009688;
+$teal_sedeNav: #004E43;
 /*---------added google icons ----------*/
 @font-face {
   font-family: 'Material Icons';
@@ -49,7 +50,7 @@ body {
 }
 
 .brand-logo{
-  color:$teal_darken!important;
+  color:#003320!important;
 }
 .login-form{
   width:100%;
@@ -154,11 +155,22 @@ table,.collapsible{
     font-size: 70px;
   }
 }
-.side-nav{
-  background-color:#004d40;
-  a{
+.side-nav.fixed {
+  background-color: $teal_sedeNav;
+  li:hover {
+    background-color: rgba(0,0,0,0.5);
+  }
+  a, i{
     color: white;
     font-size:22px;
+    background-color: $teal_sedeNav;
+    vertical-align:middle;
+  }
+  i {
+    vertical-align: middle;
+    margin-right: 20px;
+    font-size:24px;
+
   }
 }
 .container.inner-container-min {
@@ -178,4 +190,7 @@ nav .button-collapse i {
 }
 nav .button-collapse i:hover {
   transform: rotate(180deg);
+}
+.modal-footer.center-align .btn{
+  float: none;
 }
