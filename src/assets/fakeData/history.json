@@ -1,27 +1,27 @@
 [
 	{
-    "photo": "app/content/img/motorola.jpg",
-    "description":"telephone with bluetooth",
-    "cost": "300"
+    "photo": "src/assets/img/games.jpg",
+    "description":"Gaming application",
+    "cost": "30"
     },
 	{
-    "photo": "app/content/img/nokia.jpg",
-    "description":"smartphone",
-    "cost": "500"
+    "photo": "src/assets/img/gift.jpg",
+    "description":"Gifts for friends",
+    "cost": "50"
     },
 	{
-    "photo": "app/content/img/iphone.jpg",
-    "description":"telephone with wi-fi",
-    "cost": "800"
+    "photo": "src/assets/img/rank.jpg",
+    "description":"Page rank's increasing",
+    "cost": "80"
     },
 	{
-    "photo": "app/content/img/samsung.jpg",
-    "description":"smartphone",
-    "cost": "600"
+    "photo": "src/assets/img/games.jpg",
+    "description":"Gaming application",
+    "cost": "60"
     },
 	{
-    "photo": "app/content/img/nokiaBig.jpg",
-    "description":"smartphone with big display",
-    "cost": "700"
+    "photo": "src/assets/img/mark.jpg",
+    "description":"Advertising",
+    "cost": "70"
   }
 ]
