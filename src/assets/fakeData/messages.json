@@ -1,22 +1,27 @@
 [
 	{
+    "from": "Tim",
     "date":"12.02.2016",
-  "message":"Hello, how are you?"
+    "message":"Hello, how are you?"
   },
 	{
+    "from": "Linda",
     "date":"14.02.2016",
-  "message":"I'm fine!"
+    "message":"I'm fine!"
   },
 	{
+    "from": "Tim",
     "date":"14.02.2016",
-  "message":"And you?"
+    "message":"And you?"
   },
 	{
+    "from": "Linda",
     "date":"16.02.2016",
-  "message":"Me too!"
+    "message":"Me too!"
   },
 	{
+    "from": "Tim",
     "date":"18.02.2016",
-  "message":"It's a very good!"
+    "message":"It's a very good!"
   }
 ]

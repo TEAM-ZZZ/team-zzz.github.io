@@ -172,3 +172,6 @@ nav .button-collapse i:hover {
 
 .modal-footer.center-align .btn {
   float: none; }
+
+.message-from {
+  color: #777; }
