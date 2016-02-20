@@ -1,27 +1,37 @@
 [
 	{
-    "from": "Tim",
+    "from": "Sam",
     "date":"12.02.2016",
-    "message":"Hello, how are you?"
+    "message":"I'm searching for a site containing real situation dialog in English between natives. Can you help me please?"
   },
 	{
-    "from": "Linda",
+    "from": "Guest",
     "date":"14.02.2016",
-    "message":"I'm fine!"
+    "message":"And if possible containing a transcript of the dialog. I heard that podcasting can be a possible solution. Any additional information please?"
   },
 	{
-    "from": "Tim",
+    "from": "charles",
     "date":"14.02.2016",
-    "message":"And you?"
+    "message":"Im dialog for english"
   },
 	{
-    "from": "Linda",
+    "from": "Guest",
     "date":"16.02.2016",
-    "message":"Me too!"
+    "message":"http://www.englishtown. com .... subscribe for a free service of diolog lessons."
   },
 	{
-    "from": "Tim",
+    "from": "Acosta",
     "date":"18.02.2016",
-    "message":"It's a very good!"
+    "message":"I need to practice different kind of dialogs because I need more vocabulary in a normal conversation. I will apreciatte your help as soon as posible"
+  },
+  {
+    "from": "Guest",
+    "date":"19.02.2016",
+    "message":"http://www.englishtown.com/master/hp/"
+  },
+  {
+    "from": "Guest",
+    "date":"19.02.2016",
+    "message":"All of their lessons pertain to the real-world and vocabulary you need, and their videocasts (you can see a tab for it on the site) and podcasts all deal with real-life situations like opening a bank account, asking for directions, etc. It's really excellent... and free :)"
   }
 ]

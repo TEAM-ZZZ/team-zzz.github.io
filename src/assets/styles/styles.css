@@ -58,12 +58,13 @@ body {
   position: relative; }
 
 .user-image {
+  min-height: 201px;
   padding: 25px 0 20px;
   background-color: #009688; }
 
 .profile-img {
   max-height: 150px;
-  box-shadow: 0px 0px 15px black; }
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); }
 
 .profile-form {
   text-align: center; }
@@ -161,17 +162,23 @@ table, .collapsible {
 .menu-icons, .menu-link {
   display: inline-block !important; }
 
-nav .button-collapse i {
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s; }
-
-nav .button-collapse i:hover {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
 .modal-footer.center-align .btn {
   float: none; }
 
 .message-from {
   color: #777; }
+
+.message-title {
+  position: absolute;
+  left: 0;
+  margin-left: 75px; }
+
+.message-date {
+  color: #777; }
+
+.title-color {
+  color: white;
+  background-color: #009688;
+  margin: 0;
+  padding: 15px 0;
+  box-shadow: 0 10px 0 #009688; }
