@@ -10,11 +10,17 @@ function config($stateProvider, $urlRouterProvider) {
     .state('homePage', {
       url: '/home',
       views: {
-        'topNav': {},
+        'topNav': {
+          templateUrl: 'src/app/topNav/topNav.html',
+          controller: 'topNavCtrl'
+        },
         'content': {
           templateUrl: 'src/app/login/login.html',
           controller: 'loginCtrl'
         }
+      },
+      params: {
+        showLoginNav: true
       }
     })
     .state('personalPage', {
@@ -28,6 +34,9 @@ function config($stateProvider, $urlRouterProvider) {
           templateUrl: 'src/app/profile/profile.html',
           controller: 'profileCtrl'
         }
+      },
+      params: {
+        showProfileNav: true
       }
     })
     .state('history', {
@@ -41,6 +50,9 @@ function config($stateProvider, $urlRouterProvider) {
           templateUrl: 'src/app/history/history.html',
           controller: 'historyCtrl'
         }
+      },
+      params: {
+        showProfileNav: true
       }
     })
     .state('messages', {
@@ -54,6 +66,9 @@ function config($stateProvider, $urlRouterProvider) {
           templateUrl: 'src/app/messages/messages.html',
           controller: 'messagesCtrl'
         }
+      },
+      params: {
+        showProfileNav: true
       }
     })
   $urlRouterProvider
