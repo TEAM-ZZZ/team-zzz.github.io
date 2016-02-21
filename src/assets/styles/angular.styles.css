@@ -1,32 +1,76 @@
+.animate-switch-wrapper {
+  text-align: center;
+}
 .animate-switch-container {
+  display: inline-block;
   min-width: 380px;
   min-height: 350px;
-  margin: 0 auto;
   position:relative;
   overflow: hidden;
 }
 
 .animate-switch {
-
-}
-
-.animate-switch.ng-animate {
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s;
   padding: 0;
-  margin: 0;
   position: absolute;
 }
 
+.animate-switch.ng-animate {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
 .animate-switch.ng-leave.ng-leave-active {
-  left: -1000px;
+  left: -600px;
 }
 .animate-switch.ng-leave {
   left: 0;
 }
 
 .animate-switch.ng-enter {
-  right: -1000px;
+  right: -600px;
 }
 .animate-switch.ng-enter.ng-enter-active {
   right: 0;
+}
+
+
+.ui-view-container {
+  position: relative;
+}
+
+[ui-view="content"].ng-enter, [ui-view="content"].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+}
+
+[ui-view="content"].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view="content"].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+[ui-view="content"].ng-leave {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+[ui-view="content"].ng-leave-active {
+  opacity: 0;
+  /* -webkit-transform:translate3d(100px, 0, 0);
+  -moz-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0); */
 }

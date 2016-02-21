@@ -5,92 +5,93 @@
         <img ng-src={{userData.avatar}} class="circle responsive-img profile-img">
       </div>
     </div>
+    <div class="animate-switch-wrapper">
 
-    <div class="animate-switch-container" ng-switch on="selection">
+      <div class="animate-switch-container" ng-switch on="selection">
 
-      <div class="animate-switch" ng-switch-when="stable">
-        <div class="container inner-container-min center-align">
-          <div class="row user-info">
-            <table class="centered bordered">
-              <tbody>
-                <tr>
-                  <td>Name</td>
-                  <td>{{userData.firstName + ' ' + userData.lastName}}</td>
-                </tr>
-                <tr>
-                  <td>Age</td>
-                  <td>{{userData.age}}</td>
-                </tr>
-                <tr>
-                  <td>Gender</td>
-                  <td>{{(userData.gender === 'F') ? 'Female' : 'Male'}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="row">
-              <button class=" waves-effect waves-light btn center-align " ng-click="profileEdit()" >Edit</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="animate-switch" ng-switch-when="edit">
-        <div class="row user-info ">
-          <form class="profile-form" name="profileForm" novalidate>
-            <div class="container inner-container-min profile-form-container">
-              <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                  <div class="collapsible-header">
-                    <span>Name : </span> {{userData.fullName}}
-                    <i class="material-icons right">arrow_drop_down</i>
-                  </div>
-                  <div class="collapsible-body">
-                   <input type="text" name="fullName" ng-change="validName()" placeholder = "Name" class="inMargin"
-										ng-pattern="/^([a-zA-Zа-яА-ЯёЁ\s]*)$/" ng-model="userData.fullName" ng-required="true"/>
-										<div ng-messages="profileForm.fullName.$error">
-											<div ng-message="required">You forgot to enter your name!</div>
-											<div ng-message="pattern">You did not enter your name correctly!</div>
-										</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="collapsible-header">
-                    <span>Age : </span> {{ userData.age}}
-                    <i class="material-icons right">arrow_drop_down</i>
-                  </div>
-                  <div class="collapsible-body">
-                    <input type="text" name="age" ng-change="validAge()" placeholder="Age" class="inMargin"
-										ng-pattern="/^(0|[1-9][0-9]*)$/" ng-model="userData.age" required />
-										<div ng-messages="profileForm.age.$error">
-											<div ng-message="required">You forgot to enter your age!</div>
-											<div ng-message="pattern">You did not enter your age correctly!</div>
-										</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="collapsible-header">
-                    <span>Gender : </span> {{(userData.gender === 'M') ? 'Male' : 'Female'}}
-                     <i class="material-icons right">arrow_drop_down</i>
-                  </div>
-                  <div class="collapsible-body">
-                    <p>
-                      <input class="with-gap" name="gender" type="radio" ng-model="userData.gender" id="genderMale" value="M" />
-                      <label for="genderMale" class="inMargin">Male</label>
-                    </p>
-                    <p>
-                      <input class="with-gap" name="gender" type="radio" ng-model="userData.gender" id="genderFemale" value="F" />
-                      <label for="genderFemale" class="inMargin">Female</label>
-                    </p>
-                  </div>
-                </li>
-              </ul>
+        <div class="animate-switch" ng-switch-when="stable">
+          <div class="container inner-container-min center-align">
+            <div class="row user-info">
+              <table class="centered bordered">
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td>{{userData.firstName + ' ' + userData.lastName}}</td>
+                  </tr>
+                  <tr>
+                    <td>Age</td>
+                    <td>{{userData.age}}</td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                    <td>{{(userData.gender === 'F') ? 'Female' : 'Male'}}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <button class=" waves-effect waves-light btn center-align " ng-click="profileSave()" >Save</button>
-          </form>
+            <div class="row">
+                <button class=" waves-effect waves-light btn center-align " ng-click="profileEdit()" >Edit</button>
+            </div>
+          </div>
         </div>
+
+        <div class="animate-switch" ng-switch-when="edit">
+          <div class="row user-info ">
+            <form class="profile-form" name="profileForm" novalidate>
+              <div class="container inner-container-min profile-form-container">
+                <ul class="collapsible" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header">
+                      <span>Name : </span> {{userData.fullName}}
+                      <i class="material-icons right">arrow_drop_down</i>
+                    </div>
+                    <div class="collapsible-body">
+                     <input type="text" name="fullName" ng-change="validName()" placeholder = "Name" class="inMargin"
+                      ng-pattern="/^([a-zA-Zа-яА-ЯёЁ\s]*)$/" ng-model="userData.fullName" ng-required="true"/>
+                      <div ng-messages="profileForm.fullName.$error">
+                        <div ng-message="required">You forgot to enter your name!</div>
+                        <div ng-message="pattern">You did not enter your name correctly!</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header">
+                      <span>Age : </span> {{ userData.age}}
+                      <i class="material-icons right">arrow_drop_down</i>
+                    </div>
+                    <div class="collapsible-body">
+                      <input type="text" name="age" ng-change="validAge()" placeholder="Age" class="inMargin"
+                      ng-pattern="/^(0|[1-9][0-9]*)$/" ng-model="userData.age" required />
+                      <div ng-messages="profileForm.age.$error">
+                        <div ng-message="required">You forgot to enter your age!</div>
+                        <div ng-message="pattern">You did not enter your age correctly!</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header">
+                      <span>Gender : </span> {{(userData.gender === 'M') ? 'Male' : 'Female'}}
+                       <i class="material-icons right">arrow_drop_down</i>
+                    </div>
+                    <div class="collapsible-body">
+                      <p>
+                        <input class="with-gap" name="gender" type="radio" ng-model="userData.gender" id="genderMale" value="M" />
+                        <label for="genderMale" class="inMargin">Male</label>
+                      </p>
+                      <p>
+                        <input class="with-gap" name="gender" type="radio" ng-model="userData.gender" id="genderFemale" value="F" />
+                        <label for="genderFemale" class="inMargin">Female</label>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <button class=" waves-effect waves-light btn center-align " ng-click="profileSave()" >Save</button>
+            </form>
+          </div>
+        </div>
+
       </div>
-
-
     </div>
   </div>
 </div>
