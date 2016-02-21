@@ -138,8 +138,12 @@ table,.collapsible{
     color:black;
   }
 }
+.collapsible-header{
+  position:relative;
+}
 @media only screen and (min-width : 720px) {
   .background {
+    background-size:100vw 100vh;
     background-image: url("../img/bg-desktop.jpg");
   }
 }
@@ -165,10 +169,18 @@ table,.collapsible{
     font-size: 70px;
   }
 }
+@media only screen and (min-width : 992px){
+    .wrapper{
+      margin-left:240px;
+    }
+}
 .side-nav.fixed {
   background-color: $teal_sedeNav;
-  li:hover {
-    background-color: rgba(0,0,0,0.5);
+  li{
+    padding:0;
+    &:hover {
+      background-color: rgba(0,0,0,0.5);
+    }
   }
   a, i{
     color: white;
@@ -215,4 +227,7 @@ table,.collapsible{
   margin: 0;
   padding: 15px 0;
   box-shadow: 0 10px 0 #009688;
+}
+.cost-sorting{
+  width:100px;
 }

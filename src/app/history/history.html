@@ -6,22 +6,22 @@
 						<td>
 							<a href="" ng-click="sortType = 'photo'; sortReverse = !sortReverse">
 							Photo 
-							<span ng-show="sortType == 'photo' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'photo' && sortReverse" class="fa fa-caret-up"></span>
+							<span ng-show="sortType == 'photo' && !sortReverse" ></span>
+							<span ng-show="sortType == 'photo' && sortReverse" ></span>
 							</a>
 						</td>
 						<td>
 							<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
 							Description 
-							<span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+							<span ng-show="sortType == 'description' && !sortReverse" >Z - A</span>
+							<span ng-show="sortType == 'description' && sortReverse" >A - Z</span>
 							</a>
 						</td>
-						<td>
+						<td class="cost-sorting">
 							<a href="" ng-click="sortType = 'cost'; sortReverse = !sortReverse">
 							Cost 
-							<span ng-show="sortType == 'cost' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'cost' && sortReverse" class="fa fa-caret-up"></span>
+							<span ng-show="sortType == 'cost' && !sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_up</i></span>
+							<span ng-show="sortType == 'cost' && sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_down</i></span>
 							</a>
 						</td>
           </tr>
