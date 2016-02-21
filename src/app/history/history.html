@@ -1,27 +1,26 @@
 <div class="wrapper">
-	<input type="text" ng-model="search" placeholder="Enter a search phrase"/>
+	<h4 class="center-align title-color">Purchase history:</h4>
+	<input class="history-search" type="text" ng-model="search" placeholder="Enter a search phrase"/>
 	  <table class="highlight bordered">
         <thead>
           <tr>
 						<td>
-							<a href="" ng-click="sortType = 'photo'; sortReverse = !sortReverse">
+							<a href="">
 							Photo 
-							<span ng-show="sortType == 'photo' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'photo' && sortReverse" class="fa fa-caret-up"></span>
 							</a>
 						</td>
 						<td>
 							<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
 							Description 
-							<span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+							<span ng-show="sortType == 'description' && !sortReverse" >A - Z</span>
+							<span ng-show="sortType == 'description' && sortReverse" >Z - A</span>
 							</a>
 						</td>
-						<td>
+						<td class="cost-sorting">
 							<a href="" ng-click="sortType = 'cost'; sortReverse = !sortReverse">
 							Cost 
-							<span ng-show="sortType == 'cost' && !sortReverse" class="fa fa-caret-down"></span>
-							<span ng-show="sortType == 'cost' && sortReverse" class="fa fa-caret-up"></span>
+							<span ng-show="sortType == 'cost' && !sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_up</i></span>
+							<span ng-show="sortType == 'cost' && sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_down</i></span>
 							</a>
 						</td>
           </tr>
