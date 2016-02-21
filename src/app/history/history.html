@@ -1,37 +1,34 @@
 <div class="wrapper">
 	<h4 class="center-align title-color">Purchase history:</h4>
 	<input class="history-search" type="text" ng-model="search" placeholder="Enter a search phrase"/>
-	  <table class="highlight bordered">
-        <thead>
-          <tr>
-						<td>
-							<a href="">
-							Photo 
-							</a>
-						</td>
-						<td>
-							<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
-							Description 
-							<span ng-show="sortType == 'description' && !sortReverse" >A - Z</span>
-							<span ng-show="sortType == 'description' && sortReverse" >Z - A</span>
-							</a>
-						</td>
-						<td class="cost-sorting">
-							<a href="" ng-click="sortType = 'cost'; sortReverse = !sortReverse">
-							Cost 
-							<span ng-show="sortType == 'cost' && !sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_up</i></span>
-							<span ng-show="sortType == 'cost' && sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_down</i></span>
-							</a>
-						</td>
-          </tr>
-        </thead>
-
-        <tbody>
-					<tr ng-repeat="data in historyData | orderBy:sortType:sortReverse | filter:search">
-						<td><img ng-src="{{ data.photo }}"></td>
-						<td>{{ data.description }}</td>
-						<td>{{ data.cost }}</td>
-					</tr>
-        </tbody>
-      </table>
+  <table class="highlight bordered">
+    <thead>
+      <tr>
+				<td>
+					<a href="">Photo</a>
+				</td>
+				<td>
+					<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
+            Description
+            <span ng-show="sortType == 'description' && !sortReverse" >A - Z</span>
+					  <span ng-show="sortType == 'description' && sortReverse" >Z - A</span>
+					</a>
+				</td>
+				<td class="cost-sorting">
+					<a href="" ng-click="sortType = 'cost'; sortReverse = !sortReverse">
+						Cost
+						<span ng-show="sortType == 'cost' && !sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_up</i></span>
+						<span ng-show="sortType == 'cost' && sortReverse" ><i class="material-icons sorting-arrow">arrow_drop_down</i></span>
+					</a>
+				</td>
+      </tr>
+    </thead>
+  </table>
+  <ul class="animate-repeat-box">
+		<li class="animate-repeat row" ng-repeat="data in historyData | orderBy:sortType:sortReverse | filter:search">
+      <div class="col s3"><img ng-src="{{ data.photo }}"></div>
+      <div class="col s7">{{ data.description }}</div>
+      <div class="col s2">{{ data.cost }}</div>
+		</li>
+  </ul>
 </div>
