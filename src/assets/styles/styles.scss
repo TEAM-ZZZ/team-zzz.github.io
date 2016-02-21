@@ -170,14 +170,14 @@ table,.collapsible{
   }
 }
 @media only screen and (min-width : 992px){
-    .wrapper{
-      margin-left:240px;
-    }
+  .wrapper{
+    margin-left:240px;
+  }
 }
 .side-nav.fixed {
   background-color: $teal_sedeNav;
   li{
-    padding:0;
+    padding:0px;
     &:hover {
       background-color: rgba(0,0,0,0.5);
     }
@@ -230,4 +230,7 @@ table,.collapsible{
 }
 .cost-sorting{
   width:100px;
+}
+.history-search{
+  padding-left:10px!important;
 }

@@ -1,20 +1,19 @@
 <div class="wrapper">
-	<input type="text" ng-model="search" placeholder="Enter a search phrase"/>
+	<h4 class="center-align title-color">Purchase history:</h4>
+	<input class="history-search" type="text" ng-model="search" placeholder="Enter a search phrase"/>
 	  <table class="highlight bordered">
         <thead>
           <tr>
 						<td>
-							<a href="" ng-click="sortType = 'photo'; sortReverse = !sortReverse">
+							<a href="">
 							Photo 
-							<span ng-show="sortType == 'photo' && !sortReverse" ></span>
-							<span ng-show="sortType == 'photo' && sortReverse" ></span>
 							</a>
 						</td>
 						<td>
 							<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
 							Description 
-							<span ng-show="sortType == 'description' && !sortReverse" >Z - A</span>
-							<span ng-show="sortType == 'description' && sortReverse" >A - Z</span>
+							<span ng-show="sortType == 'description' && !sortReverse" >A - Z</span>
+							<span ng-show="sortType == 'description' && sortReverse" >Z - A</span>
 							</a>
 						</td>
 						<td class="cost-sorting">

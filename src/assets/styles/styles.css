@@ -157,7 +157,7 @@ table, .collapsible {
 .side-nav.fixed {
   background-color: #004E43; }
   .side-nav.fixed li {
-    padding: 0; }
+    padding: 0px; }
     .side-nav.fixed li:hover {
       background-color: rgba(0, 0, 0, 0.5); }
   .side-nav.fixed a, .side-nav.fixed i {
@@ -202,3 +202,6 @@ table, .collapsible {
 
 .cost-sorting {
   width: 100px; }
+
+.history-search {
+  padding-left: 10px !important; }
