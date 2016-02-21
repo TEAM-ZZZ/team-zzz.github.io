@@ -52,7 +52,7 @@ body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: calc(100vh - 56px);
 }
 
 .brand-logo{
