@@ -11,10 +11,6 @@ body {
   min-height: 500px;
   position: relative; }
 
-/* .wrapper-header {
-  position: absolute;
-  width: 100%;
-} */
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -76,9 +72,6 @@ body {
   text-align: center; }
   .profile-form-container {
     text-align: left; }
-
-.header {
-  margin-bottom: 0 !important; }
 
 .greeting {
   color: #00796B;
@@ -212,3 +205,17 @@ table, .collapsible {
 
 .greeting-title {
   margin: 0px; }
+
+.history-info {
+  border-bottom: 1px solid #9e9e9e;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px; }
+
+.history-search {
+  height: 50px !important;
+  font-size: 2rem !important;
+  line-height: 60px !important; }
+
+.history-sorting-arrow {
+  vertical-align: middle; }
