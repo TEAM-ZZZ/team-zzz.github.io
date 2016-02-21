@@ -154,6 +154,9 @@ table,.collapsible{
   }
 }
 @media only screen and (min-width : 600px) {
+  .background{
+    height: calc(100vh - 64px);
+  }
   .greeting-info {
     padding: 15px;
     width: 500px;
@@ -233,7 +236,6 @@ table,.collapsible{
 }
 .history-search{
   height:50px!important;
-  padding-left:10px!important;
   font-size:2rem!important;
   line-height:60px!important;
 }

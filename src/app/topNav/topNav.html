@@ -1,6 +1,9 @@
 <header class="wrapper-header">
   <nav ng-show="showProfileNav" class="top-nav teal darken-3">
       <a href="" class="button-collapse" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+      <ul class="right">
+        <li><a ui-sref="homePage" class="waves-effect waves-light btn teal darken-2 "> Logout</a></li>
+      </ul>
   </nav>
   <nav ng-show="showLoginNav" class="top-nav teal darken-3">
     <a ui-sref="homePage" class="brand-logo circle left">Stimul<span class="white-text">US</span></a>
@@ -8,7 +11,7 @@
       <li><a class="modal-trigger waves-effect waves-light btn teal darken-2" href='#loginWindow' modal >Sign in</a></li>
     </ul>
   </nav>
-  <ul class="side-nav fixed" id="mobile-demo">
+  <ul class="side-nav fixed" id="mobile-demo" ng-show="showProfileNav">
     <li><a ui-sref="personalPage" class="waves-effect waves-teal"><i class="material-icons menu-icons">account_box</i> Profile</a></li>
     <li><a ui-sref="history" class="waves-effect waves-teal"><i class="material-icons menu-icons">content_paste</i> History</a></li>
     <li><a ui-sref="messages" class="waves-effect waves-teal"><i class="material-icons menu-icons">chat</i> Messages</a></li>
