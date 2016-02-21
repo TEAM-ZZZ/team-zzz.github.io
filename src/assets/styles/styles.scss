@@ -114,6 +114,7 @@ table,.collapsible{
 }
 .page-wrapper {
   position: relative;
+  overflow: hidden;
   .greeting-info-wrapper {
   text-align: center;
   }
@@ -162,7 +163,6 @@ table,.collapsible{
     font-size:20px;
   }
   .greeting {
-    margin-top: 20px;
     width: 500px;
   }
   .greeting h2 {
@@ -232,5 +232,11 @@ table,.collapsible{
   width:100px;
 }
 .history-search{
+  height:50px!important;
   padding-left:10px!important;
+  font-size:2rem!important;
+  line-height:60px!important;
+}
+.greeting-title{
+  margin:0px;
 }

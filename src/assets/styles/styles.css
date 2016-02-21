@@ -103,7 +103,8 @@ table, .collapsible {
   font-size: 20px !important; }
 
 .page-wrapper {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .page-wrapper .greeting-info-wrapper {
     text-align: center; }
   .page-wrapper .greeting-info {
@@ -145,7 +146,6 @@ table, .collapsible {
     margin-left: -250px;
     font-size: 20px; }
   .greeting {
-    margin-top: 20px;
     width: 500px; }
   .greeting h2 {
     font-size: 70px; } }
@@ -204,4 +204,10 @@ table, .collapsible {
   width: 100px; }
 
 .history-search {
-  padding-left: 10px !important; }
+  height: 50px !important;
+  padding-left: 10px !important;
+  font-size: 2rem !important;
+  line-height: 60px !important; }
+
+.greeting-title {
+  margin: 0px; }
