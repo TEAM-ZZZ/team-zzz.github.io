@@ -104,12 +104,13 @@ input::-webkit-inner-spin-button {
     width:100%;
     padding-top:25px;
     &-wrapper{
-      top: 0!important;
+      top: 50%!important;
       min-width: 250px!important;
       width: 35%!important;
       border-radius: 30px;
       margin:0 auto;
-      position:relative;
+      margin-top: -150px;
+      position:absolute;
     }
   }
   &-button{
@@ -168,6 +169,9 @@ input::-webkit-inner-spin-button {
   &-sorting-arrow{
     vertical-align:middle;
   }
+  &-cost {
+    padding-left:18px!important;
+  }
 }
 /*---------------------------Message box---------------------------------*/
 .message{
@@ -212,6 +216,9 @@ input::-webkit-inner-spin-button {
   }
   &-table,&-accordion{
     font-size:20px!important;
+    td {
+      width: 50%;
+    }
   }
 }
 
@@ -225,6 +232,16 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-height : 500px) {
   .greeting-info {
     display: none!important;
+  }
+}
+@media only screen and (min-width : 500px) {
+  .message {
+    &-title, &-body{
+      font-size:16px;
+    }
+    &-from, &-date {
+      font-size:90%;
+    }
   }
 }
 @media only screen and (min-width : 601px) {
@@ -246,14 +263,34 @@ input::-webkit-inner-spin-button {
     font-size:70px;
     }
   }
-
 }
 @media only screen and (min-width : 992px){
   .wrapper{
     margin-left:240px;
+
+    .side-nav.fixed {
+      left:0!important;
+    }
   }
 }
-
+@media only screen and (max-width : 390px) {
+  .history-info {
+    font-size: 18px;
+  }
+  .animate-repeat.row div {
+    font-size: 16px;
+  }
+  .container.inner-container-min {
+    width: 330px;
+  }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .animate-switch-container {
+    min-width: 330px;
+  }
+}
 /*------------------------------------------------------------------*/
 
 .side-nav.fixed li:first-child a{

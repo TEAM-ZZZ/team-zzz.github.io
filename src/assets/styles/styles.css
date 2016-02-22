@@ -84,12 +84,13 @@ input::-webkit-inner-spin-button {
   width: 100%;
   padding-top: 25px; }
   .login-form-wrapper {
-    top: 0 !important;
+    top: 50% !important;
     min-width: 250px !important;
     width: 35% !important;
     border-radius: 30px;
     margin: 0 auto;
-    position: relative; }
+    margin-top: -150px;
+    position: absolute; }
 
 .login-button {
   float: none !important; }
@@ -134,6 +135,9 @@ input::-webkit-inner-spin-button {
 .history-sorting-arrow {
   vertical-align: middle; }
 
+.history-cost {
+  padding-left: 18px !important; }
+
 /*---------------------------Message box---------------------------------*/
 .message-from {
   color: #777; }
@@ -171,6 +175,8 @@ input::-webkit-inner-spin-button {
 
 .profile-table, .profile-accordion {
   font-size: 20px !important; }
+  .profile-table td, .profile-accordion td {
+    width: 50%; }
 
 /*----------------------Media queries-------------------*/
 @media only screen and (min-width: 720px) {
@@ -181,6 +187,12 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-height: 500px) {
   .greeting-info {
     display: none !important; } }
+
+@media only screen and (min-width: 500px) {
+  .message-title, .message-body {
+    font-size: 16px; }
+  .message-from, .message-date {
+    font-size: 90%; } }
 
 @media only screen and (min-width: 601px) {
   .login-background {
@@ -199,7 +211,22 @@ input::-webkit-inner-spin-button {
 
 @media only screen and (min-width: 992px) {
   .wrapper {
-    margin-left: 240px; } }
+    margin-left: 240px; }
+    .wrapper .side-nav.fixed {
+      left: 0 !important; } }
+
+@media only screen and (max-width: 390px) {
+  .history-info {
+    font-size: 18px; }
+  .animate-repeat.row div {
+    font-size: 16px; }
+  .container.inner-container-min {
+    width: 330px; }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0; }
+  .animate-switch-container {
+    min-width: 330px; } }
 
 /*------------------------------------------------------------------*/
 .side-nav.fixed li:first-child a {

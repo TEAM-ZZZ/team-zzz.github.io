@@ -24,7 +24,7 @@
 		<li class="animate-repeat row s12" ng-repeat="data in historyData | orderBy:sortType:sortReverse | filter:search">
       <div class="col s3"><img ng-src="{{ data.photo }}"></div>
       <div class="col s6">{{ data.description }}</div>
-      <div class="col s3 left">{{ data.cost }}</div>
+      <div class="col s3 history-cost">{{ data.cost }}</div>
 		</li>
   </ul>
 </div>
