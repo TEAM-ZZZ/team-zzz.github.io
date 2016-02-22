@@ -59,20 +59,6 @@ body {
   margin: 0 auto;
   position: relative; }
 
-.user-image {
-  min-height: 201px;
-  padding: 25px 0 20px;
-  background-color: #009688; }
-
-.profile-img {
-  max-height: 150px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); }
-
-.profile-form {
-  text-align: center; }
-  .profile-form-container {
-    text-align: left; }
-
 .greeting {
   color: #00796B;
   margin: 0 auto;
@@ -168,9 +154,6 @@ table, .collapsible {
 .container.inner-container-min {
   width: 380px; }
 
-.user-info {
-  padding-top: 15px; }
-
 .menu-icons, .menu-link {
   display: inline-block !important; }
 
@@ -219,3 +202,19 @@ table, .collapsible {
 
 .message-date {
   color: #777; }
+
+.profile-image {
+  max-height: 150px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); }
+  .profile-image-wrapper {
+    min-height: 201px;
+    padding: 25px 0 20px;
+    background-color: #009688; }
+
+.profile-form {
+  text-align: center; }
+  .profile-form-container {
+    text-align: left; }
+
+.profile-info {
+  padding-top: 15px; }

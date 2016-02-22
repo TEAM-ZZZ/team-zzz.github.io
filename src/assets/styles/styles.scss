@@ -67,21 +67,9 @@ body {
   margin:0 auto;
   position:relative;
 }
-.user-image{
-  min-height: 201px;
-  padding: 25px 0 20px;
-  background-color: $teal_lighten;
-}
-.profile-img{
-  max-height:150px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-}
-.profile-form{
-  text-align:center;
-  &-container{
-  text-align:left;
-  }
-}
+
+
+
 
 
 .greeting {
@@ -196,9 +184,7 @@ table,.collapsible{
 .container.inner-container-min {
   width: 380px;
 }
-.user-info {
-  padding-top: 15px;
-}
+
 
 .menu{
   &-icons,&-link{
@@ -259,5 +245,26 @@ table,.collapsible{
   }
   &-date{
     color: #777;
+  }
+}
+
+.profile{
+  &-image{
+    max-height:150px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    &-wrapper{
+      min-height: 201px;
+      padding: 25px 0 20px;
+      background-color: $teal_lighten;
+    }
+  }
+  &-form{
+    text-align:center;
+    &-container{
+      text-align:left;
+    }
+  }
+  &-info {
+    padding-top: 15px;
   }
 }

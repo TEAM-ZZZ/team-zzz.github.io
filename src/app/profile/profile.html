@@ -1,17 +1,15 @@
 <div class="wrapper">
   <div class="user">
-    <div class="row user-image">
+    <div class="row profile-image-wrapper">
       <div class=" col s12 center-align">
-        <img ng-src={{userData.avatar}} class="circle responsive-img profile-img">
+        <img ng-src={{userData.avatar}} class="circle responsive-img profile-image">
       </div>
     </div>
     <div class="animate-switch-wrapper">
-
       <div class="animate-switch-container" ng-switch on="selection">
-
         <div class="animate-switch" ng-switch-when="stable">
           <div class="container inner-container-min center-align">
-            <div class="row user-info">
+            <div class="row profile-info">
               <table class="centered bordered">
                 <tbody>
                   <tr>
@@ -36,7 +34,7 @@
         </div>
 
         <div class="animate-switch" ng-switch-when="edit">
-          <div class="row user-info ">
+          <div class="row profile-info ">
             <form class="profile-form" name="profileForm" novalidate>
               <div class="container inner-container-min profile-form-container">
                 <ul class="collapsible" data-collapsible="accordion">

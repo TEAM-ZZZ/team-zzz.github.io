@@ -4,7 +4,7 @@
 .animate-switch-container {
   display: inline-block;
   min-width: 380px;
-  min-height: 350px;
+  min-height: 400px;
   position:relative;
   overflow: hidden;
 }
