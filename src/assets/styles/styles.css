@@ -177,6 +177,8 @@ input::-webkit-inner-spin-button {
   font-size: 20px !important; }
   .profile-table td, .profile-accordion td {
     width: 50%; }
+  .profile-table .collapsible-body p, .profile-accordion .collapsible-body p {
+    padding: 10px; }
 
 /*----------------------Media queries-------------------*/
 @media only screen and (min-width: 720px) {
