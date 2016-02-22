@@ -5,9 +5,12 @@
     .module('stimulApp')
     .controller('profileCtrl', editProfile);
 
-    function editProfile ($scope, $state, userService){
-			$scope.onSubmit;
-      userService.getData().then(success, error);
+    function editProfile ($scope, $state, httpService){
+      if(httpService.userData != null){
+        $scope.userData = httpService.userData;
+      } else {
+        httpService.getUser().then(success, error);
+      }
 
       $scope.selection = 'stable';
 
@@ -31,9 +34,8 @@
           gender: $scope.userData.gender
         };
 
-        userService.saveData(dataObj).then(successPost, errorPost);
+        httpService.postUser(dataObj).then(successPost, errorPost);
       };
-
 
 
       function success(answer) {
@@ -44,7 +46,7 @@
         console.log('Sorry, something went wrong. The source data is unavailable.' + reason)
       }
       function successPost(answer) {
-        console.log(answer);
+        console.log("Json is sent successfully");
       }
       function  errorPost(reason) {
         console.log('Sorry, something went wrong.' + reason);

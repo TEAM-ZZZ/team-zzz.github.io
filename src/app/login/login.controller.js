@@ -6,7 +6,7 @@
     .controller('loginCtrl', checkLogin);
 
   function checkLogin ($scope, $state) {
-	  $scope.showError = false;
+    $scope.showError = false;
 
     $scope.isValid = function(login, password) {
       if (login === 'zzz' && password === 'zzz') {
@@ -17,10 +17,10 @@
       }
     };
 
-	  $scope.resetA = function() {
+    $scope.resetA = function() {
       $scope.temp={};
-  		$scope.userForm.$setUntouched();
-  		$scope.userForm.$setPristine();
+      $scope.userForm.$setUntouched();
+      $scope.userForm.$setPristine();
     }
 
     $('.modal-trigger').leanModal();

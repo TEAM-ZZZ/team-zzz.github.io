@@ -13,7 +13,11 @@ var gulp = require('gulp'),
     angularFilesort = require('gulp-angular-filesort'),
     inject = require('gulp-inject'),
     mainBowerFiles = require('main-bower-files'),
-    ngAnnotate = require('gulp-ng-annotate');
+    ngAnnotate = require('gulp-ng-annotate'),
+    karma = require("karma"),
+    gulpKarma = require("gulp-karma"),
+    Server = karma.Server;
+
 
 // server connect
 gulp.task('connect', function() {
@@ -100,6 +104,48 @@ gulp.task('html', function(){
   .pipe(notify('sort and inject Done! :)'))
   .pipe(connect.reload())
   .pipe(notify('HTML Done! :)'));
+});
+
+/**
+ * Run test once and exit
+ */
+/*gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + 'test/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});*/
+
+/**
+ * Watch for file changes and re-run tests on each change
+ */
+/*gulp.task('unit-test', function (done) {
+  new Server({
+    configFile: __dirname + '/test/karma.conf.js'
+  }, done).start();
+});*/
+gulp.task('unit-test', function (done) {
+  Server.start({
+    configFile: __dirname + '/test/karma.conf.js'
+  }, done);
+});
+gulp.task('watch-unit', function() {
+  return gulp.src([
+      'bower/angular/angular.js',
+      'bower/angular-ui-router/release/angular-ui-router.js',
+      'bower/angular-mocks/angular-mocks.js',
+      'bower/angular-animate/angular-animate.js',
+      'bower/angular-messages/angular-messages.js',
+      'src/app/app.module.js',
+      'src/app/*.js',
+      'src/app/**/*.js',
+      'test/unit/**/*.js',
+      'test/unit/*.js'
+    ])
+    .pipe(gulpKarma({
+      configFile: __dirname + '/test/karma.conf.js',
+      action: 'watch'
+    }));
 });
 
 // watch
