@@ -1,4 +1,4 @@
-<div class="page-wrapper background">
+<div class="login-wrapper login-background">
   <div class="greeting-info-wrapper">
     <div class="greeting">
       <h2 class='center-align greeting-title'>Welcome to the Stimul<span class="white-text teal darken-4 circle">US</span></h2>
@@ -9,7 +9,7 @@
       <p><span class="white-text">Share your news</span></p>
   	</div>
   </div>
-  <div class="modal" id="loginWindow">
+  <div class="modal login-form-wrapper" id="loginWindow">
     <div class=" valign-wrapper" >
       <div class="login-form containter valign center-align">
         <div class="row">
@@ -19,7 +19,7 @@
                 <i class="material-icons prefix">account_circle</i>
                 <input type="text" id="login"  ng-model="temp.login" ng-minlength="3" name="login" required>
                 <label for="login">Login</label>
-				        <div ng-messages="userForm.login.$error" ng-if="userForm.login.$touched" class="error">
+				        <div ng-messages="userForm.login.$error" ng-if="userForm.login.$touched" class="login-error">
       				    <div ng-message="required">This field is required.</div>
       				    <div ng-message="minlength">The min length is 3.</div>
       			    </div>
@@ -30,7 +30,7 @@
                 <i class="material-icons prefix">lock_outline</i>
                 <input type="password" id="password" ng-model="temp.password" ng-minlength="3" name="password" required>
                 <label for="password">Password</label>
-        				<div ng-messages="userForm.password.$error" ng-if="userForm.password.$touched" class="error">
+        				<div ng-messages="userForm.password.$error" ng-if="userForm.password.$touched" class="login-error">
         				  <div ng-message="required">This field is required.</div>
         				  <div ng-message="minlength">The min length is 3.</div>
 			          </div>
@@ -38,11 +38,11 @@
             </div>
             <div class="row">
   		        <div>
-  			       <span ng-show="showError" class="error">A wrong password or user name.</span>
+  			       <span ng-show="showError" class="login-error">A wrong password or user name.</span>
   			      </div>
               <div class="modal-footer center-align">
-                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="resetA(userForm)">Reset</button>
-                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4" ng-click="isValid(temp.login, temp.password)" ng-disabled="userForm.$invalid">Sign in</button>
+                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4 login-button" ng-click="resetA(userForm)">Reset</button>
+                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4 login-button" ng-click="isValid(temp.login, temp.password)" ng-disabled="userForm.$invalid">Sign in</button>
               </div>
             </div>
           </form>

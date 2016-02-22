@@ -3,6 +3,8 @@
 	<ul class="collapsible " data-collapsible="expandable">
     <li ng-repeat="elem in messageData">
       <div class="collapsible-header">
+    <li ng-repeat="elem in messagesData">
+      <div class="collapsible-header message-header">
     	  <small class="message-from">{{elem.from}}: </small> <span class="message-title">{{elem.message | limitTo: 15}}...</span>
      	  <small class="message-date right">{{elem.date}}</small>
       </div>
