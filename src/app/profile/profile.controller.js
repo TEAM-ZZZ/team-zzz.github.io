@@ -8,6 +8,7 @@
     function editProfile ($scope, $state, httpService){
       if(httpService.userData != null){
         $scope.userData = httpService.userData;
+        $scope.userData.fullName = $scope.userData.firstName + ' ' + $scope.userData.lastName;
       } else {
         httpService.getUser().then(success, error);
       }
