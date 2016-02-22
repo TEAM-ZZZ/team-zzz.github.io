@@ -127,7 +127,7 @@ input::-webkit-inner-spin-button {
     }
   }
   .side-nav.fixed {
-    background-color: $teal_sedeNav;
+    background-color: white;
     li{
       padding:0px;
       &:hover {
@@ -135,9 +135,9 @@ input::-webkit-inner-spin-button {
       }
     }
     a, i{
-      color: white;
+      color: $teal_sedeNav;
       font-size:22px;
-      background-color: $teal_sedeNav;
+      background-color: white;
       vertical-align:middle;
     }
     i {
@@ -256,20 +256,23 @@ input::-webkit-inner-spin-button {
 
 /*------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.side-nav.fixed li:first-child a{
+  color: white;
+  height:100px;
+  background-color: $teal_sedeNav;
+  padding-top:15px;
+}
+.side-nav .avatar-nav {
+  width: 70px;
+  border-radius: 50%;
+}
+.side-nav .name-nav {
+  display: block;
+  width: 100px;
+  float: right;
+  line-height:75px;
+  overflow: hidden;
+}
 
 
 
