@@ -177,17 +177,6 @@ table, .collapsible {
 .modal-footer.center-align .btn {
   float: none; }
 
-.message-from {
-  color: #777; }
-
-.message-title {
-  position: absolute;
-  left: 0;
-  margin-left: 75px; }
-
-.message-date {
-  color: #777; }
-
 .title-color {
   color: white;
   background-color: #009688;
@@ -219,3 +208,14 @@ table, .collapsible {
 
 .history-sorting-arrow {
   vertical-align: middle; }
+
+.message-from {
+  color: #777; }
+
+.message-title {
+  position: absolute;
+  left: 0;
+  margin-left: 75px; }
+
+.message-date {
+  color: #777; }
