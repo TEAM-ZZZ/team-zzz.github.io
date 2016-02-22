@@ -90,6 +90,8 @@ input::-webkit-inner-spin-button {
   }
   &-error{
     color:red;
+    font-size: 14px;
+    text-align: center;
   }
   &-background{
     background-image: url("../img/bg.jpg");
@@ -201,13 +203,13 @@ input::-webkit-inner-spin-button {
   }
   &-info {
     padding-top: 15px;
+    .inMargin{
+      font-size:16px!important;
+      text-indent:15px!important;
+    }
   }
   &-table,&-accordion{
     font-size:20px!important;
-  }
-  .inMargin{
-    font-size:20px!important;
-    text-indent:15px!important;
   }
 }
 
@@ -227,7 +229,7 @@ input::-webkit-inner-spin-button {
   .login-background{
     height: calc(100vh - 64px);
   }
- 
+
   .greeting {
     width: 500px;
     &-info{

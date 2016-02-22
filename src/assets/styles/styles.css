@@ -70,7 +70,9 @@ input::-webkit-inner-spin-button {
         text-align: center; }
 
 .login-error {
-  color: red; }
+  color: red;
+  font-size: 14px;
+  text-align: center; }
 
 .login-background {
   background-image: url("../img/bg.jpg");
@@ -161,13 +163,12 @@ input::-webkit-inner-spin-button {
 
 .profile-info {
   padding-top: 15px; }
+  .profile-info .inMargin {
+    font-size: 16px !important;
+    text-indent: 15px !important; }
 
 .profile-table, .profile-accordion {
   font-size: 20px !important; }
-
-.profile .inMargin {
-  font-size: 20px !important;
-  text-indent: 15px !important; }
 
 /*----------------------Media queries-------------------*/
 @media only screen and (min-width: 720px) {

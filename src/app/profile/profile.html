@@ -35,7 +35,7 @@
 
         <div class="animate-switch" ng-switch-when="edit">
           <div class="row profile-info ">
-            <form class="profile-form" name="profileForm" novalidate>
+            <form class="profile-form" name="profileForm" novalidate autocomplete="off">
               <div class="container inner-container-min profile-form-container">
                 <ul class="collapsible profile-accordion" data-collapsible="accordion">
                   <li>
@@ -44,10 +44,10 @@
                       <i class="material-icons right">arrow_drop_down</i>
                     </div>
                     <div class="collapsible-body">
-                     <input type="text" name="fullName" ng-change="validName()" placeholder = "Name" class="inMargin"
+                     <input type="text" name="fullName" placeholder = "Name" class="inMargin"
                       ng-pattern="/^([a-zA-Zа-яА-ЯёЁ\s]*)$/" ng-model="userData.fullName" ng-required="true"/>
-                      <div ng-messages="profileForm.fullName.$error">
-                        <div ng-message="required">You forgot to enter your name!</div>
+                      <div ng-messages="profileForm.fullName.$error" class="login-error">
+                        <div ng-message="required">This field is required.</div>
                         <div ng-message="pattern">You did not enter your name correctly!</div>
                       </div>
                     </div>
@@ -58,10 +58,10 @@
                       <i class="material-icons right">arrow_drop_down</i>
                     </div>
                     <div class="collapsible-body">
-                      <input type="text" name="age" ng-change="validAge()" placeholder="Age" class="inMargin"
+                      <input type="text" name="age" placeholder="Age" class="inMargin"
                       ng-pattern="/^(0|[1-9][0-9]*)$/" ng-model="userData.age" required />
-                      <div ng-messages="profileForm.age.$error">
-                        <div ng-message="required">You forgot to enter your age!</div>
+                      <div ng-messages="profileForm.age.$error" class="login-error">
+                        <div ng-message="required">This field is required.</div>
                         <div ng-message="pattern">You did not enter your age correctly!</div>
                       </div>
                     </div>
