@@ -41,7 +41,7 @@
   			       <span ng-show="showError" class="login-error">A wrong password or user name.</span>
   			      </div>
               <div class="modal-footer center-align">
-                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4 login-button" ng-click="resetA(userForm)">Reset</button>
+                <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4 login-button" ng-click="clearForm(userForm)">Reset</button>
                 <button type="submit" class="modal-action btn waves-effect waves-light center-align teal darken-4 login-button" ng-click="isValid(temp.login, temp.password)" ng-disabled="userForm.$invalid">Sign in</button>
               </div>
             </div>

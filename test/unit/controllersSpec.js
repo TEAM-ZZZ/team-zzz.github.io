@@ -2,42 +2,48 @@
 
 describe('loginCtrl test', function() {
 
-    var mockScope = {};
-    var controller;
-    var $state;
-    var $httpBackend;
+  var mockScope = {};
+  var controller;
+  var $state;
+  var $httpBackend;
 
-    beforeEach(angular.mock.module("stimulApp"));
+  beforeEach(angular.mock.module("stimulApp"));
 
-    beforeEach(angular.mock.inject(function ($controller, $rootScope, _$state_, _$httpBackend_) {
+  beforeEach(angular.mock.inject(function ($controller, $rootScope, _$state_, _$httpBackend_) {
 
-        mockScope = $rootScope.$new();
-        $state = _$state_;
-        $httpBackend = _$httpBackend_;
+      mockScope = $rootScope.$new();
+      $state = _$state_;
+      $httpBackend = _$httpBackend_;
 
-        controller = $controller("loginCtrl", {
-            $scope: mockScope,
-            $state: $state
-        });
-    }));
+      controller = $controller("loginCtrl", {
+          $scope: mockScope,
+          $state: $state
+      });
+  }));
 
-   /* it("Creation initial property of showError status", function () {
-        expect(mockScope.showError).toBeFalsy();
-    });*/
+  it("Creation initial property of showError status", function () {
+      expect(mockScope.showError).toBeFalsy();
+  });
 
-    it('should go to personalPage state', function() {
-      $httpBackend.when('GET', 'src/app/login/login.html').respond(200);
-      mockScope.$apply();
-      $httpBackend.flush();
-      expect($state.current.name).toBe('homePage');
+  it('should go to personalPage state', function() {
+    $httpBackend.when('GET', 'src/app/login/login.html').respond(200);
+    $httpBackend.when('GET', 'src/app/topNav/topNav.html').respond(200);
+    mockScope.$apply();
+    $httpBackend.flush();
+    expect($state.current.name).toBe('homePage');
 
-      $httpBackend.when('GET', 'src/app/profile/profile.html').respond(200);
-      mockScope.isValid('zzz', 'zzz');
-      mockScope.$apply();
-      $httpBackend.flush();
-      expect($state.current.name).toBe('personalPage');
+    $httpBackend.when('GET', 'src/app/profile/profile.html').respond(200);
+    mockScope.isValid('zzz', 'zzz');
+    mockScope.$apply();
+    $httpBackend.flush();
+    expect($state.current.name).toBe('personalPage');
 
-    });
+  });
+
+  it('when the clearForm function runs the form will be empty', function() {
+    mockScope.clearForm();
+    expect(mockScope.temp).toBe(null);
+  });
 
 });
 

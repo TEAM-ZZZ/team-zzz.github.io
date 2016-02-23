@@ -17,8 +17,8 @@
       }
     };
 
-    $scope.resetA = function() {
-      $scope.temp={};
+    $scope.clearForm = function() {
+      $scope.temp = null;
       $scope.userForm.$setUntouched();
       $scope.userForm.$setPristine();
     }

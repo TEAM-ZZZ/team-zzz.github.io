@@ -4,6 +4,8 @@ module.exports = function(config){
     basePath : '../',
 
     files : [
+      'bower/jquery/dist/jquery.js',
+      'bower/Materialize/dist/js/materialize.js',
       'bower/angular/angular.js',
       'bower/angular-ui-router/release/angular-ui-router.js',
       'bower/angular-mocks/angular-mocks.js',
@@ -20,7 +22,7 @@ module.exports = function(config){
 
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : ['Chrome','Firefox'],
 
     plugins : [
             'karma-chrome-launcher',
