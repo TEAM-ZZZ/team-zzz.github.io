@@ -12,7 +12,13 @@
     </ul>
   </nav>
   <ul class="side-nav fixed" id="mobile-demo" ng-show="showProfileNav">
-    <li><a ui-sref="personalPage" class="waves-effect waves-teal"><img ng-src="{{userData.avatar}}" class="avatar-nav" alt="avatar"> <span class="name-nav">{{userData.firstName}}</span></a></li>
+    <li>
+      <img ng-src="{{userData.avatar}}" class="avatar-nav" alt="avatar">
+      <span class="name-nav">
+        {{userData.firstName + " " + userData.lastName}}
+      </span>
+    </li>
+    <li><a ui-sref="personalPage" class="waves-effect waves-teal"><i class="material-icons menu-icons">account_box</i> Profile</a></li>
     <li><a ui-sref="history" class="waves-effect waves-teal"><i class="material-icons menu-icons">content_paste</i> History</a></li>
     <li><a ui-sref="messages" class="waves-effect waves-teal"><i class="material-icons menu-icons">chat</i> Messages</a></li>
     <li><a ui-sref="homePage" class="waves-effect waves-teal"><i class="material-icons menu-icons">highlight_off</i> Logout</a></li>

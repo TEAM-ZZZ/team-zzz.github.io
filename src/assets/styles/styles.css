@@ -105,18 +105,45 @@ input::-webkit-inner-spin-button {
 .wrapper-header .side-nav.fixed {
   background-color: white; }
   .wrapper-header .side-nav.fixed li {
+    border-bottom: 1px solid #004E43;
     padding: 0px; }
     .wrapper-header .side-nav.fixed li:hover {
-      background-color: rgba(0, 0, 0, 0.5); }
+      background-color: #009688; }
+  .wrapper-header .side-nav.fixed li:first-child {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    height: 100px;
+    background-color: #004E43;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    overflow: hidden; }
   .wrapper-header .side-nav.fixed a, .wrapper-header .side-nav.fixed i {
     color: #004E43;
     font-size: 22px;
-    background-color: white;
     vertical-align: middle; }
   .wrapper-header .side-nav.fixed i {
     vertical-align: middle;
     margin-right: 20px;
     font-size: 24px; }
+  .wrapper-header .side-nav.fixed a {
+    padding: 0;
+    padding-left: 5px;
+    margin: 0 15px;
+    background-color: white; }
+    .wrapper-header .side-nav.fixed a:hover {
+      background-color: white; }
+  .wrapper-header .side-nav.fixed .avatar-nav {
+    width: 70px;
+    border-radius: 50%; }
+  .wrapper-header .side-nav.fixed .name-nav {
+    display: block;
+    width: 140px;
+    float: right;
+    line-height: 75px;
+    overflow: hidden;
+    text-align: center; }
 
 /*-----------------------Purchase history-------------------------------*/
 .history-info {
@@ -231,19 +258,3 @@ input::-webkit-inner-spin-button {
     min-width: 330px; } }
 
 /*------------------------------------------------------------------*/
-.side-nav.fixed li:first-child a {
-  color: white;
-  height: 100px;
-  background-color: #004E43;
-  padding-top: 15px; }
-
-.side-nav .avatar-nav {
-  width: 70px;
-  border-radius: 50%; }
-
-.side-nav .name-nav {
-  display: block;
-  width: 100px;
-  float: right;
-  line-height: 75px;
-  overflow: hidden; }

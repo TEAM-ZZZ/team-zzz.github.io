@@ -41,9 +41,8 @@ describe('loginCtrl test', function() {
 
 });
 
-/*
 
-describe('topNavCtrl test', function() {
+/*describe('topNavCtrl test', function() {
 
     var mockScope = {};
     var controller;
@@ -118,5 +117,4 @@ describe('profileCtrl test', function() {
         expect(mockScope.selection).toBe('edit');
     });
 
-});
-*/
+});*/

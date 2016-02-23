@@ -129,26 +129,58 @@ input::-webkit-inner-spin-button {
   }
   .side-nav.fixed {
     background-color: white;
-    li{
+    li {
+      border-bottom: 1px solid $teal_sedeNav;
       padding:0px;
       &:hover {
-        background-color: rgba(0,0,0,0.5);
+        background-color: $teal_lighten;
       }
     }
-    a, i{
+    li:first-child {
+      margin:0;
+      color: white;
+      font-size:22px;
+      height:100px;
+      background-color: $teal_sedeNav;
+      padding-left: 15px;
+      padding-right:15px;
+      padding-top:15px;
+      overflow:hidden;
+    }
+    a, i {
       color: $teal_sedeNav;
       font-size:22px;
-      background-color: white;
       vertical-align:middle;
     }
     i {
       vertical-align: middle;
       margin-right: 20px;
       font-size:24px;
-
+    }
+    a {
+      padding:0;
+      padding-left:5px;
+      margin: 0 15px;
+      background-color: white;
+      &:hover {
+        background-color: white;
+      }
+    }
+    .avatar-nav {
+      width: 70px;
+      border-radius: 50%;
+    }
+    .name-nav {
+      display: block;
+      width: 140px;
+      float: right;
+      line-height:75px;
+      overflow: hidden;
+      text-align: center;
     }
   }
 }
+
 /*-----------------------Purchase history-------------------------------*/
 .history{
   &-info{
@@ -295,24 +327,6 @@ input::-webkit-inner-spin-button {
   }
 }
 /*------------------------------------------------------------------*/
-
-.side-nav.fixed li:first-child a{
-  color: white;
-  height:100px;
-  background-color: $teal_sedeNav;
-  padding-top:15px;
-}
-.side-nav .avatar-nav {
-  width: 70px;
-  border-radius: 50%;
-}
-.side-nav .name-nav {
-  display: block;
-  width: 100px;
-  float: right;
-  line-height:75px;
-  overflow: hidden;
-}
 
 
 
