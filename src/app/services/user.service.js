@@ -12,12 +12,7 @@ angular
     var that = this;
 
     this.getUser = function() {
-     /* promiseFunction('https://fathomless-everglades-3680.herokuapp.com/api/user/3', that.userData);*/
-      var promise = $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3');
-      promise.then(function(answer) {
-        that.userData = answer.data;
-      }, error);
-      return promise;
+     return getPromise('https://fathomless-everglades-3680.herokuapp.com/api/user/3', 'userData');
     };
 
     this.postUser = function(dataObj) {
@@ -26,32 +21,21 @@ angular
     };
 
     this.getHistory = function() {
-      var promise = $http.get('src/assets/fakeData/history.json');
-      promise.then(function(answer) {
-        that.historyData = answer.data;
-      }, error);
-      return promise;
+		return getPromise('src/assets/fakeData/history.json', 'historyData');
     };
 
     this.getMessage = function() {
-      var promise = $http.get('src/assets/fakeData/messages.json');
-      promise.then(function(answer) {
-        that.messageData = answer.data;
-      }, error);
-      return promise;
+	  return getPromise('src/assets/fakeData/messages.json', 'messageData');
     };
 
-  /*  function promiseFunction(route, obj) {
-      console.log(route, obj);
+    function getPromise(route, storageData) {
       var promise = $http.get(route);
-      promise.then(function(answer, obj) {
-        obj = answer.data;
-        console.log(obj);
-        console.log(that.userData);
+      promise.then(function(answer) {
+        that[storageData] = answer.data;
       }, error);
-      console.log(promise);
+	  
       return promise;
-    }*/
+    }
 
     function  error(reason) {
       console.log('Sorry, something went wrong. The source data is unavailable.' + reason)
