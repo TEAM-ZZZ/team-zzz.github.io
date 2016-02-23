@@ -5,7 +5,7 @@
         <li><a ui-sref="homePage" class="waves-effect waves-light btn teal darken-2 "> Logout</a></li>
       </ul>
   </nav>
-  <nav ng-show="showLoginNav" class="top-nav teal darken-3">
+  <nav ng-hide="showProfileNav" class="top-nav teal darken-3">
     <a ui-sref="homePage" class="brand-logo circle left">Stimul<span class="white-text">US</span></a>
     <ul class="right">
       <li><a class="modal-trigger waves-effect waves-light btn teal darken-2" href='#loginWindow' modal >Sign in</a></li>
@@ -15,7 +15,7 @@
     <li>
       <img ng-src="{{userData.avatar}}" class="avatar-nav" alt="avatar">
       <span class="name-nav">
-        {{userData.firstName + " " + userData.lastName}}
+        {{userData.fullName}}
       </span>
     </li>
     <li><a ui-sref="personalPage" class="waves-effect waves-teal"><i class="material-icons menu-icons">account_box</i> Profile</a></li>

@@ -5,15 +5,16 @@
     .module('stimulApp')
     .controller('profileCtrl', editProfile);
 
-    function editProfile ($scope, $state, httpService){
-      if(httpService.userData != null){
-        $scope.userData = httpService.userData;
-        $scope.userData.fullName = $scope.userData.firstName + ' ' + $scope.userData.lastName;
-      } else {
-        httpService.getUser().then(success, error);
+    function editProfile ($scope, $state, httpService, shareDataService) {
+      if(shareDataService.message != null) {
+        $scope.userData = shareDataService.message;
       }
 
       $scope.selection = 'stable';
+
+      $scope.$on('handleBroadcast', function() {
+          $scope.userData = shareDataService.message;
+      });
 
       $scope.profileEdit = function() {
         $scope.selection = 'edit';
@@ -21,6 +22,7 @@
           $('.collapsible').collapsible({accordion : false});
         }, 100);
       };
+
       $scope.profileSave = function() {
   		  var dataObj = null;
         $scope.selection = 'stable';
@@ -38,14 +40,6 @@
         httpService.postUser(dataObj).then(successPost, errorPost);
       };
 
-
-      function success(answer) {
-        $scope.userData = answer.data;
-        $scope.userData.fullName = $scope.userData.firstName + ' ' + $scope.userData.lastName;
-      }
-      function  error(reason) {
-        console.log('Sorry, something went wrong. The source data is unavailable.' + reason)
-      }
       function successPost(answer) {
         console.log("Json is sent successfully");
       }

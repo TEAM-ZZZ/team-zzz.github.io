@@ -18,9 +18,6 @@ function config($stateProvider, $urlRouterProvider) {
           templateUrl: 'src/app/login/login.html',
           controller: 'loginCtrl'
         }
-      },
-      params: {
-        showLoginNav: true
       }
     })
     .state('personalPage', {
