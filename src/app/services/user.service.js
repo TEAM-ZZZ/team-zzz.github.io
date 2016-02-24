@@ -5,37 +5,57 @@ angular
 	.module('stimulApp')
 	.service('httpService', serviceFunction);
 
-	function serviceFunction($http){
-    this.userData = null;
-    this.messageData = null;
-    this.historyData = null;
-    var that = this;
+	function serviceFunction($http, $q){
+    var userData;
+    var messageData;
+    var historyData;
 
     this.postUser = function(dataObj) {
-      this.userData = dataObj;
+      userData = dataObj;
       return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
-    };
+	  
+   
+   };
 
     this.getUser = function() {
-      return getPromise('https://fathomless-everglades-3680.herokuapp.com/api/user/3', 'userData');
+      if (userData) {
+        var deferred = $q.defer();
+        deferred.resolve(userData);
+        return deferred.promise;
+      }
+      return $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3') 
+        .then(function(data) {
+          userData = data;
+          return userData
+        });
+	 
     };
 
     this.getHistory = function() {
-		  return getPromise('src/assets/fakeData/history.json', 'historyData');
+	  if (historyData) {
+        var deferred = $q.defer();
+        deferred.resolve(historyData);
+        return deferred.promise;
+      }
+      return $http.get('src/assets/fakeData/history.json') 
+        .then(function(data) {
+          historyData = data;
+          return historyData
+        });
     };
 
     this.getMessage = function() {
-	    return getPromise('src/assets/fakeData/messages.json', 'messageData');
+	 if (messageData) {
+        var deferred = $q.defer();
+        deferred.resolve(messageData);
+        return deferred.promise;
+      }
+      return $http.get('src/assets/fakeData/messages.json') 
+        .then(function(data) {
+          messageData = data;
+          return messageData
+        });
     };
-
-    function getPromise(route, storageData) {
-      var promise = $http.get(route);
-      promise.then(function(answer) {
-        that[storageData] = answer.data;
-      }, error);
-
-      return promise;
-    }
 
     function  error(reason) {
       console.log('Sorry, something went wrong. The source data is unavailable.' + reason);

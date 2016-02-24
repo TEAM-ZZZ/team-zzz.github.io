@@ -7,14 +7,12 @@ angular
 
   function messagesCtrl($scope, $state, $http, httpService) {
 
-    if(httpService.messageData != null) {
-      $scope.messageData = httpService.messageData;
-    } else {
+   
       httpService.getMessage().then(success, error);
-    }
+    
 
-    function success(answer) {
-      $scope.messageData = answer.data;
+    function success(responce) {
+      $scope.messageData = responce.data; 
     }
     function error(error) {
       console.log("Something goes wrong", error);

@@ -6,15 +6,20 @@
     .controller('profileCtrl', editProfile);
 
     function editProfile ($scope, $state, httpService, shareDataService) {
-      if(shareDataService.message != null) {
-        $scope.userData = shareDataService.message;
-      }
+		
+     $scope.selection = 'stable';
+	 httpService.getUser().then(success, error);
+    
+    function success(responce) {
+       $scope.userData  = responce.data;
+    }
+    function error(error) {
+      console.log("Something goes wrong", error);
+    }
+       
+      
 
-      $scope.selection = 'stable';
-
-      $scope.$on('handleBroadcast', function() {
-          $scope.userData = shareDataService.message;
-      });
+     
 
       $scope.profileEdit = function() {
         $scope.selection = 'edit';

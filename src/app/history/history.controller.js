@@ -10,14 +10,12 @@ angular
     $scope.sortReverse = false;
     $scope.search  = '';
 
-    if(httpService.historyData != null) {
-      $scope.historyData = httpService.historyData;
-    } else {
+   
       httpService.getHistory().then(success, error);
-    }
+    
 
-    function success(answer) {
-      $scope.historyData = answer.data;
+    function success(responce) {
+      $scope.historyData = responce.data;
     }
     function error(error) {
       console.log("Something goes wrong", error);
