@@ -11,7 +11,7 @@
     $scope.isValid = function(login, password) {
       if (login === 'zzz' && password === 'zzz') {
         $('#loginWindow').closeModal();
-        $state.go('personalPage');
+        $state.go('root.profile');
       } else {
         $scope.showError = 'true';
       }

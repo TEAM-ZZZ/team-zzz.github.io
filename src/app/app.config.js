@@ -7,27 +7,33 @@ angular
 
 function config($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('homePage', {
-      url: '/home',
+    .state('root', {
+      abstract: true,
+      url: '/',
       views: {
-        'topNav': {
-          templateUrl: 'src/app/topNav/topNav.html',
-          controller: 'topNavCtrl'
+        'navbar': {
+          templateUrl: 'src/app/navbar/navbar.html',
+          controller: 'navbarCtrl'
         },
-        'content': {
+        'content': {}
+      }
+    })
+    .state('root.login', {
+      url: 'login',
+      views: {
+        'content@': {
           templateUrl: 'src/app/login/login.html',
           controller: 'loginCtrl'
         }
+      },
+      params: {
+        showProfileNav: false
       }
     })
-    .state('personalPage', {
-      url: '/zzz/profile',
+    .state('root.profile', {
+      url: 'zzz/profile',
       views: {
-        'topNav': {
-          templateUrl: 'src/app/topNav/topNav.html',
-          controller: 'topNavCtrl'
-        },
-        'content': {
+        'content@': {
           templateUrl: 'src/app/profile/profile.html',
           controller: 'profileCtrl'
         }
@@ -36,14 +42,10 @@ function config($stateProvider, $urlRouterProvider) {
         showProfileNav: true
       }
     })
-    .state('history', {
-      url: '/zzz/history',
+    .state('root.history', {
+      url: 'zzz/history',
       views: {
-        'topNav': {
-          templateUrl: 'src/app/topNav/topNav.html',
-          controller: 'topNavCtrl'
-        },
-        'content': {
+        'content@': {
           templateUrl: 'src/app/history/history.html',
           controller: 'historyCtrl'
         }
@@ -52,14 +54,10 @@ function config($stateProvider, $urlRouterProvider) {
         showProfileNav: true
       }
     })
-    .state('messages', {
-      url: '/zzz/messages',
+    .state('root.messages', {
+      url: 'zzz/messages',
       views: {
-        'topNav': {
-          templateUrl: 'src/app/topNav/topNav.html',
-          controller: 'topNavCtrl'
-        },
-        'content': {
+        'content@': {
           templateUrl: 'src/app/messages/messages.html',
           controller: 'messagesCtrl'
         }
@@ -69,7 +67,7 @@ function config($stateProvider, $urlRouterProvider) {
       }
     })
   $urlRouterProvider
-    .otherwise('/home');
+    .otherwise('/login');
 }
 
 })();
