@@ -6,25 +6,21 @@
 			<span style="color: #039be5;">Photo</span>
 		</div>
 		<div class="col s6">
-			<a href="" ng-click="sortType = 'description'; sortReverse = !sortReverse">
+			<a href="" ng-click="sort('description')">
         Description
-        <span ng-show="sortType == 'description' && !sortReverse" >A - Z</span>
-			  <span ng-show="sortType == 'description' && sortReverse" >Z - A</span>
 			</a>
 		</div>
 		<div class="col s3">
-			<a href="" ng-click="sortType = 'cost'; sortReverse = !sortReverse" class="left">
+			<a href="" ng-click="sort('cost')">
 				Cost
-				<span ng-show="sortType == 'cost' && !sortReverse" ><i class="material-icons history-sorting-arrow">arrow_drop_up</i></span>
-				<span ng-show="sortType == 'cost' && sortReverse" ><i class="material-icons history-sorting-arrow">arrow_drop_down</i></span>
 			</a>
 		</div>
   </div>
   <ul class="animate-repeat-box">
-		<li class="animate-repeat row s12" ng-repeat="data in historyData | orderBy:sortType:sortReverse | filter:search">
-      <div class="col s3"><img ng-src="{{ data.photo }}"></div>
-      <div class="col s6">{{ data.description }}</div>
-      <div class="col s3 history-cost">{{ data.cost }}</div>
+		<li class="animate-repeat row s12" ng-repeat="item in historyData | orderBy:sortType:sortBack | filter:search">
+      <div class="col s3"><img ng-src="{{ item.photo }}"></div>
+      <div class="col s6">{{ item.description }}</div>
+      <div class="col s3 history-cost">{{ item.cost }}</div>
 		</li>
   </ul>
 </div>
