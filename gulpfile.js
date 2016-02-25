@@ -1,22 +1,22 @@
 'use strict';
 
-var gulp = require('gulp'),
-    minifyCss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    autoprefixer = require('gulp-autoprefixer'),
-    livereload = require('gulp-livereload'),
-    connect = require('gulp-connect'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
-    uncss = require('gulp-uncss'),
-    angularFilesort = require('gulp-angular-filesort'),
-    inject = require('gulp-inject'),
-    mainBowerFiles = require('main-bower-files'),
-    ngAnnotate = require('gulp-ng-annotate'),
-    karma = require("karma"),
-    gulpKarma = require("gulp-karma"),
-    Server = karma.Server;
+var gulp = require('gulp');
+var minifyCss = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var notify = require('gulp-notify');
+var autoprefixer = require('gulp-autoprefixer');
+var livereload = require('gulp-livereload');
+var connect = require('gulp-connect');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var uncss = require('gulp-uncss');
+var angularFilesort = require('gulp-angular-filesort');
+var inject = require('gulp-inject');
+var mainBowerFiles = require('main-bower-files');
+var ngAnnotate = require('gulp-ng-annotate');
+var karma = require("karma");
+var gulpKarma = require("gulp-karma");
+var Server = karma.Server;
 
 
 // server connect

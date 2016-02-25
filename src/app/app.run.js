@@ -5,7 +5,7 @@
     .module('stimulApp')
     .run(runFunc);
 
-  function runFunc ($rootScope, $state, $interval, $location, authFactory) {
+  function runFunc ($rootScope, $state, authFactory) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, options) {
 
       if (toState.params.authenticated) {

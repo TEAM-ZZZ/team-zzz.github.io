@@ -5,36 +5,24 @@
     .module('stimulApp')
     .controller('profileCtrl', editProfile);
 
-    function editProfile ($scope, $state, httpService, authFactory) {
+    function editProfile ($scope, $state, $timeout, httpService, authFactory) {
+      $scope.selection = 'stable';
 
-     $scope.selection = 'stable';
-	 httpService.getUser().then(success, error);
-
-    function success(responce) {
-       $scope.userData  = responce.data;
-    }
-    function error(error) {
-      console.log("Something goes wrong", error);
-    }
-
-
-
-
+      httpService.getUser().then(success, error);
 
       $scope.profileEdit = function() {
         $scope.selection = 'edit';
-        setTimeout(function(){
+        $timeout(function(){
           $('.collapsible').collapsible({accordion : false});
-        }, 100);
+        }, 1);
       };
 
       $scope.profileSave = function() {
-  		  var dataObj = null;
         $scope.selection = 'stable';
         $scope.userData.firstName = $scope.userData.fullName.split(' ')[0];
   		  $scope.userData.lastName = $scope.userData.fullName.split(' ')[1];
 
-        dataObj = {
+        var data = {
           avatar: $scope.userData.avatar,
           firstName: $scope.userData.firstName,
           lastName: $scope.userData.lastName,
@@ -42,9 +30,15 @@
           gender: $scope.userData.gender
         };
 
-        httpService.postUser(dataObj).then(successPost, errorPost);
+        httpService.postUser(data).then(successPost, errorPost);
       };
 
+      function success(responce) {
+         $scope.userData  = responce.data;
+      }
+      function error(error) {
+        console.log("Something goes wrong", error);
+      }
       function successPost(answer) {
         console.log("Json is sent successfully");
       }

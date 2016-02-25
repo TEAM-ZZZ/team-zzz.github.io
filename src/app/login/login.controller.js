@@ -5,7 +5,7 @@
     .module('stimulApp')
     .controller('loginCtrl', checkLogin);
 
-  function checkLogin ($scope, $document, $state, $timeout, $http, authFactory, localStorageService) {
+  function checkLogin ($scope, $state, $timeout, $http, authFactory) {
     $scope.showError = false;
 
     $scope.isValid = function(login, password) {
@@ -18,6 +18,7 @@
         ].join(''))
           .then(loginSuccess, loginError);*/
 
+      //temporary for fake request
       $http.get([
         'src/assets/fakeData/auth.json',
         '?password=',
@@ -29,7 +30,6 @@
 
       $('.preloader-wrapper.big').toggleClass('active');
       $('.login-form input, .login-form button').attr('disabled', true);
-
 
       function loginSuccess(response) {
         //temporary check for fake request

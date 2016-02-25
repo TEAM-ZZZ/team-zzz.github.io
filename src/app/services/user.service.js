@@ -13,9 +13,7 @@ angular
     this.postUser = function(dataObj) {
       userData = dataObj;
       return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
-	  
-   
-   };
+    };
 
     this.getUser = function() {
       if (userData) {
@@ -23,21 +21,20 @@ angular
         deferred.resolve(userData);
         return deferred.promise;
       }
-      return $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3') 
+      return $http.get('https://fathomless-everglades-3680.herokuapp.com/api/user/3')
         .then(function(data) {
           userData = data;
           return userData
         });
-	 
     };
 
     this.getHistory = function() {
-	  if (historyData) {
+	    if (historyData) {
         var deferred = $q.defer();
         deferred.resolve(historyData);
         return deferred.promise;
       }
-      return $http.get('src/assets/fakeData/history.json') 
+      return $http.get('src/assets/fakeData/history.json')
         .then(function(data) {
           historyData = data;
           return historyData
@@ -45,12 +42,12 @@ angular
     };
 
     this.getMessage = function() {
-	 if (messageData) {
+	    if (messageData) {
         var deferred = $q.defer();
         deferred.resolve(messageData);
         return deferred.promise;
       }
-      return $http.get('src/assets/fakeData/messages.json') 
+      return $http.get('src/assets/fakeData/messages.json')
         .then(function(data) {
           messageData = data;
           return messageData
