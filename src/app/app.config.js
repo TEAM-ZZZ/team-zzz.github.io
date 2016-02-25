@@ -5,7 +5,7 @@ angular
   .module('stimulApp')
   .config(config);
 
-function config($stateProvider, $urlRouterProvider) {
+function config($stateProvider, $urlRouterProvider, $httpProvider, localStorageServiceProvider) {
   $stateProvider
     .state('root', {
       abstract: true,
@@ -27,7 +27,8 @@ function config($stateProvider, $urlRouterProvider) {
         }
       },
       params: {
-        showProfileNav: false
+        showProfileNav: false,
+        authenticated: false
       }
     })
     .state('root.profile', {
@@ -39,7 +40,8 @@ function config($stateProvider, $urlRouterProvider) {
         }
       },
       params: {
-        showProfileNav: true
+        showProfileNav: true,
+        authenticated: true
       }
     })
     .state('root.history', {
@@ -51,7 +53,8 @@ function config($stateProvider, $urlRouterProvider) {
         }
       },
       params: {
-        showProfileNav: true
+        showProfileNav: true,
+        authenticated: true
       }
     })
     .state('root.messages', {
@@ -63,11 +66,18 @@ function config($stateProvider, $urlRouterProvider) {
         }
       },
       params: {
-        showProfileNav: true
+        showProfileNav: true,
+        authenticated: true
       }
     })
   $urlRouterProvider
     .otherwise('/login');
+
+ /* $httpProvider.interceptors.push('sessionInjector');*/
+
+  localStorageServiceProvider
+    .setPrefix('stimulUs')
+    .setStorageType('sessionStorage');
 }
 
 })();

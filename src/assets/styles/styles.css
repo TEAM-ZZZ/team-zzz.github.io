@@ -91,6 +91,11 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
     margin-top: -150px;
     position: absolute; }
+    .login-form-wrapper .preloader-wrapper.big {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -32px 0 0 -32px; }
 
 .login-button {
   float: none !important; }

@@ -4,15 +4,18 @@
     .module('stimulApp')
     .controller('navbarCtrl', topNav);
 
-  function topNav($scope, $rootScope, $state, httpService, shareDataService){
+  function topNav($scope, $rootScope, $state, httpService, localStorageService){
     $scope.showProfileNav = $state.params.showProfileNav;
     $rootScope.$on('$stateChangeSuccess', function() {
       $scope.showProfileNav = $state.params.showProfileNav;
     });
 
-    
-      httpService.getUser().then(success, error);
-    
+    httpService.getUser().then(success, error);
+
+    $scope.logout = function() {
+      localStorageService.clearAll();
+    }
+
 
     function success(responce) {
       $scope.userData = responce.data;

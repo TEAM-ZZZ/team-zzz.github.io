@@ -2,7 +2,7 @@
   <nav ng-show="showProfileNav" class="top-nav teal darken-3">
       <a href="" class="button-collapse" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
       <ul class="right">
-        <li><a ui-sref="root.login" class="waves-effect waves-light btn teal darken-2 "> Logout</a></li>
+        <li><a ui-sref="root.login" class="waves-effect waves-light btn teal darken-2" ng-click="logout()"> Logout</a></li>
       </ul>
   </nav>
   <nav ng-hide="showProfileNav" class="top-nav teal darken-3">
@@ -21,6 +21,6 @@
     <li><a ui-sref="root.profile" class="waves-effect waves-teal"><i class="material-icons menu-icons">account_box</i> Profile</a></li>
     <li><a ui-sref="root.history" class="waves-effect waves-teal"><i class="material-icons menu-icons">content_paste</i> History</a></li>
     <li><a ui-sref="root.messages" class="waves-effect waves-teal"><i class="material-icons menu-icons">chat</i> Messages</a></li>
-    <li><a ui-sref="root.login" class="waves-effect waves-teal"><i class="material-icons menu-icons">highlight_off</i> Logout</a></li>
+    <li><a ui-sref="root.login" class="waves-effect waves-teal" ng-click="logout()"><i class="material-icons menu-icons">highlight_off</i> Logout</a></li>
   </ul>
 </header>

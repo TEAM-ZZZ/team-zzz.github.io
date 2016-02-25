@@ -5,21 +5,21 @@
     .module('stimulApp')
     .controller('profileCtrl', editProfile);
 
-    function editProfile ($scope, $state, httpService, shareDataService) {
-		
+    function editProfile ($scope, $state, httpService, authFactory) {
+
      $scope.selection = 'stable';
 	 httpService.getUser().then(success, error);
-    
+
     function success(responce) {
        $scope.userData  = responce.data;
     }
     function error(error) {
       console.log("Something goes wrong", error);
     }
-       
-      
 
-     
+
+
+
 
       $scope.profileEdit = function() {
         $scope.selection = 'edit';
