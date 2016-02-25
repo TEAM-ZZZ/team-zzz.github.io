@@ -9,10 +9,10 @@ angular
     $scope.sortBack = false;
     $scope.search  = '';
 		
-		$scope.sort = function(name){
-			$scope.sortType === name;
-			$scope.sortBack = !$scope.sortBack;
-		}
+    $scope.sort = function(name){
+      $scope.sortType = name;
+      $scope.sortBack = !$scope.sortBack;
+    }
 
     httpService.getHistory().then(success, error);
     
