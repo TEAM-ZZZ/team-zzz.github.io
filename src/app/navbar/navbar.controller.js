@@ -14,8 +14,9 @@
     $scope.logout = function() {
       localStorageService.clearAll();
     };
-
-    httpService.getUser().then(success, error);
+    if ($scope.showProfileNav) {
+      httpService.getUser().then(success, error);
+    }
 
     function success(responce) {
       $scope.userData = responce.data;

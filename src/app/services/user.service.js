@@ -10,9 +10,9 @@ angular
     var messageData;
     var historyData;
 
-    this.postUser = function(dataObj) {
-      userData = dataObj;
-      return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', dataObj);
+    this.postUser = function(data) {
+      userData = data;
+      return $http.post('https://fathomless-everglades-3680.herokuapp.com/api/user/3', data);
     };
 
     this.getUser = function() {
