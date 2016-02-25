@@ -9,14 +9,14 @@
 
     $rootScope.$on('$stateChangeSuccess', function() {
       $scope.showProfileNav = $state.params.showProfileNav;
+
+      if ($scope.showProfileNav)
+        httpService.getUser().then(success, error);
     });
 
     $scope.logout = function() {
       localStorageService.clearAll();
     };
-    if ($scope.showProfileNav) {
-      httpService.getUser().then(success, error);
-    }
 
     function success(responce) {
       $scope.userData = responce.data;
