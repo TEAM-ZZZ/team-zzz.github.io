@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h4 class="center-align title-color">Purchase history:</h4>
+  <input class="history-search" type="text" ng-model="search" placeholder="Enter a search phrase"/>
+  <div class="row s12 history-info">
+    <div class="col s3 ">
+      <span style="color: #039be5;">Photo</span>
+    </div>
+    <div class="col s6">
+      <a href="" ng-click="sort('description')">Description</a>
+    </div>
+    <div class="col s3">
+      <a href="" ng-click="sort('cost')">Cost</a>
+    </div>
+  </div>
+  <ul class="animate-repeat-box">
+    <li class="animate-repeat row s12" ng-repeat="item in historyData | orderBy:sortType:sortDirection | filter:search">
+      <div class="col s3"><img ng-src="{{ item.photo }}"></div>
+      <div class="col s6">{{ item.description }}</div>
+      <div class="col s3 history-cost">{{ item.cost }}</div>
+    </li>
+  </ul>
+</div>

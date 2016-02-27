@@ -2,6 +2,6 @@
 'use strict';
 
 angular
-  .module('chatApp', [  ]);
+  .module('stimulApp', ['ui.router', 'ngAnimate', 'ngMessages', 'LocalStorageModule']);
 
 })();

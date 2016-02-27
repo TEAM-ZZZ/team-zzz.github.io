@@ -1,0 +1,14 @@
+<div class="wrapper">
+	<h4 class="center-align title-color">Messages:</h4>
+	<ul class="collapsible " data-collapsible="expandable">
+    <li ng-repeat="elem in messageData">
+      <div class="collapsible-header message-header">
+    	  <small class="message-from">{{elem.from}}: </small> <span class="message-title">{{elem.message | limitTo: 15}}...</span>
+     	  <small class="message-date right">{{elem.date}}</small>
+      </div>
+      <div class="collapsible-body">
+	      <p class='message-body'>{{elem.message}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

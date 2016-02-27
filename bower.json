@@ -1,10 +1,13 @@
 {
-  "name": "chatApp",
+  "name": "zzzApp",
   "devDependencies": {
     "jquery": "~2.2.0",
     "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
     "angular-mocks": "1.4.x",
     "Materialize": "materialize#~0.97.5",
+    "angular-animate": "~1.5.0",
+    "angular-messages": "~1.5.0",
     "angular-local-storage": "~0.2.5"
   }
 }

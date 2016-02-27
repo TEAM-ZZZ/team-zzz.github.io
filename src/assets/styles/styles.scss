@@ -1,110 +1,354 @@
+$white:#fff;
+$teal:#26a69a;
+$teal_darken:#00796B;
+$teal_lighten:#009688;
+$teal_sedeNav: #004E43;
+/*---------------------- google icons---------------------------*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v12/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/*-----------------------common styles------------------------*/
+body {
+  padding: 0;
+  margin: 0;
+  min-height:500px;
+  position: relative;
+}
+
+.title-color {
+  color: white;
+  background-color: #009688;
+  margin: 0;
+  padding: 15px 0;
+  box-shadow: 0 10px 0 #009688;
+}
+
+.white-text{
+  color:$white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container.inner-container-min {
+  width: 380px;
+}
+/*---------------------------------login page-------------------------------*/
+.login{
+  &-wrapper{
+    position: relative;
+    overflow: hidden;
+
+    .greeting{
+      color:$teal_darken;
+      margin: 0 auto;
+      margin-top: 70px;
+      width: 360px;
+      text-shadow: 0 0 5px white;
+
+      &-info{
+        display: inline-block;
+        padding: 15px 5px;
+        width: 360px;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 15px;
+        position: absolute;
+        bottom: 50px;
+        margin-left: -180px;
+        font-size:18px;
+
+        &-wrapper{
+          text-align: center;
+        }
+      }
+    }
+  }
+  &-error{
+    color:red;
+    font-size: 14px;
+    text-align: center;
+  }
+  &-background{
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 56px);
   }
 
-  main {
-    flex: 1 0 auto;
+  &-form{
+    width:100%;
+    padding-top:25px;
+    &-wrapper{
+      top: 50%!important;
+      min-width: 250px!important;
+      width: 35%!important;
+      border-radius: 30px;
+      margin:0 auto;
+      margin-top: -150px;
+      position:absolute;
+      .preloader-wrapper.big {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -32px 0 0 -32px;
+      }
+    }
   }
-      
-.input-field{
+  &-button{
+    float: none!important;
+  }
+}
+/*------------------------------------------------header-----------------*/
+.wrapper-header{
+  .brand-logo{
+    color:#003320!important;
+  }
+  .menu{
+    &-icons{
+      display:inline-block!important;
+    }
+  }
+  .side-nav.fixed {
+    background-color: white;
+    li {
+      border-bottom: 1px solid $teal_sedeNav;
+      padding:0px;
+      &:hover {
+        background-color: $teal_lighten;
+      }
+    }
+    li:first-child {
+      margin:0;
+      color: white;
+      font-size:22px;
+      height:100px;
+      background-color: $teal_sedeNav;
+      padding-left: 15px;
+      padding-right:15px;
+      padding-top:15px;
+      overflow:hidden;
+    }
+    a, i {
+      color: $teal_sedeNav;
+      font-size:22px;
+      vertical-align:middle;
+    }
+    i {
+      vertical-align: middle;
+      margin-right: 20px;
+      font-size:24px;
+    }
+    a {
+      padding:0;
+      padding-left:5px;
+      margin: 0 15px;
+      background-color: white;
+      &:hover {
+        background-color: white;
+      }
+    }
+    .avatar-nav {
+      width: 70px;
+      border-radius: 50%;
+    }
+    .name-nav {
+      display: block;
+      width: 140px;
+      float: right;
+      line-height:75px;
+      overflow: hidden;
+      text-align: center;
+    }
+  }
+}
 
-  margin:0px;
-  label{
+/*-----------------------Purchase history-------------------------------*/
+.history{
+  &-info{
+    border-bottom: 1px solid #9e9e9e;
+    height:60px;
+    line-height:60px;
+    font-size:20px;
+  }
+
+  &-search{
+    padding-top:8px!important;
+    height:40px!important;
+    font-size:1.2rem!important;
+    text-indent:15px;
+    /* line-height:60px!important; */
+  }
+
+  &-sorting-arrow{
+    vertical-align:middle;
+  }
+  &-cost {
+    padding-left:18px!important;
+  }
+}
+/*---------------------------Message box---------------------------------*/
+.message{
+  &-from{
+    color: #777;
+  }
+  &-title{
+    position: absolute;
+    left: 0;
+    margin-left: 75px;
+  }
+  &-date{
+    color: #777;
+  }
+  &-header{
+    position:relative;
+  }
+}
+/*----------------------------Profile page-----------------------------*/
+.profile{
+  &-image{
+    max-height:150px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    &-wrapper{
+      min-height: 201px;
+      padding: 25px 0 20px;
+      background-color: $teal_lighten;
+    }
+  }
+  &-form{
+    text-align:center;
+    &-container{
+      text-align:left;
+    }
+  }
+  &-info {
+    padding-top: 15px;
+    .inMargin{
+      font-size:16px!important;
+      text-indent:15px!important;
+    }
+  }
+  &-table,&-accordion{
     font-size:20px!important;
+    td {
+      width: 50%;
+    }
+    .collapsible-body p {
+      padding:10px;
+    }
   }
 }
 
-textarea.materialize-textarea{
-  padding:0px!important;
-  margin-top:10px;
- 
+/*----------------------Media queries-------------------*/
+@media only screen and (min-width : 720px) {
+  .login-background {
+    background-size:100vw 100vh;
+    background-image: url("../img/bg-desktop.jpg");
+  }
 }
-textarea:focus{
-  font-size:20px;
+@media only screen and (max-height : 500px) {
+  .greeting-info {
+    display: none!important;
+  }
 }
-.row{
-  padding:0px;
+@media only screen and (min-width : 500px) {
+  .message {
+    &-title, &-body{
+      font-size:16px;
+    }
+    &-from, &-date {
+      font-size:90%;
+    }
+  }
 }
-.messages-window{
-  margin-top:20px;
-  position:relative;
-  padding:20px 0;
-  border:2px solid #455a64;
-  height:72vh;
-  border-radius:5px;
-  overflow-y:auto;
-  font-size:18px;
-}
+@media only screen and (min-width : 601px) {
+  .login-background{
+    height: calc(100vh - 64px);
+  }
 
-.message-incoming{
-  left:15px;
-  width:50%;
+  .greeting {
+    width: 500px;
+    &-info{
+      padding: 15px;
+      width: 500px;
+      background-color: rgba(0,0,0,0.5);
+      bottom: 50px;
+      margin-left: -250px;
+      font-size:20px;
+    }
+    h2{
+    font-size:70px;
+    }
+  }
 }
-   .message-incoming {
-    display:inline-block;
+@media only screen and (min-width : 992px){
+  .wrapper{
+    margin-left:240px;
 
-    border: 2px solid #455a64;
-    border-radius: 10px;
-    padding: 20px 20px 10px 20px;
-    position: relative;
-   }
-   .message-incoming::before, .message-incoming::after {
-    content: ''; 
-    position: absolute;
-    left: 20px;
-    bottom: -22px;
-    border: 10px solid transparent;
-    border-top: 10px solid #455a64;
-   }
-   .message-incoming::after {
-    border-top: 10px solid white;
-    bottom: -19px; 
-   }
-
-
-
-.message-author{
-display:inline-block;
-  margin-top:10px;
+    .side-nav.fixed {
+      left:0!important;
+    }
+  }
 }
-.message-time{
-  position:absolute;
-  bottom:10px;
-  right:10px;
+@media only screen and (max-width : 390px) {
+  .history-info {
+    font-size: 18px;
+  }
+  .animate-repeat.row div {
+    font-size: 16px;
+  }
+  .container.inner-container-min {
+    width: 330px;
+  }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .animate-switch-container {
+    min-width: 330px;
+  }
 }
+/*------------------------------------------------------------------*/
 
-.message-outcoming{
-  display:inline-block;
-  width:50%;
-    border: 2px solid #455a64;
-    border-radius: 10px;
-    padding: 20px 20px 10px 20px;
-    position: relative;
-        left: calc(100% - 54%);
-}
-.message-wrapper{
-  position:relative;
-  height:auto;
-  margin-top:30px;
-}
 
-.message-info{
-  font-size:16px;
-  color: #00897b;
-}
 
-   .message-outcoming::before, .message-outcoming::after {
-    content: ''; 
-    position: absolute;
-    right: 20px;
-    bottom: -22px;
-    border: 10px solid transparent;
-    border-top: 10px solid #455a64;
-   }
-   .message-outcoming::after {
-    border-top: 10px solid white;
-    bottom: -19px; 
-   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

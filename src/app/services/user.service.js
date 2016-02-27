@@ -2,7 +2,7 @@
 'use strict';
 
 angular
-	.module('chatApp')
+	.module('stimulApp')
 	.service('httpService', serviceFunction);
 
 	function serviceFunction($http, $q){
